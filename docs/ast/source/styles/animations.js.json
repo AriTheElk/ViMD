@@ -90,7 +90,27 @@
           "line": 1,
           "column": 46
         }
-      }
+      },
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * CSS animation for fading in without moving\n ",
+          "range": [
+            48,
+            101
+          ],
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 0
+            },
+            "end": {
+              "line": 5,
+              "column": 3
+            }
+          }
+        }
+      ]
     },
     {
       "type": "ExportNamedDeclaration",
@@ -103,16 +123,16 @@
               "type": "Identifier",
               "name": "fadeIn",
               "range": [
-                61,
-                67
+                115,
+                121
               ],
               "loc": {
                 "start": {
-                  "line": 3,
+                  "line": 6,
                   "column": 13
                 },
                 "end": {
-                  "line": 3,
+                  "line": 6,
                   "column": 19
                 }
               }
@@ -123,16 +143,16 @@
                 "type": "Identifier",
                 "name": "keyframes",
                 "range": [
-                  70,
-                  79
+                  124,
+                  133
                 ],
                 "loc": {
                   "start": {
-                    "line": 3,
+                    "line": 6,
                     "column": 22
                   },
                   "end": {
-                    "line": 3,
+                    "line": 6,
                     "column": 31
                   }
                 }
@@ -148,16 +168,16 @@
                     },
                     "tail": true,
                     "range": [
-                      79,
-                      126
+                      133,
+                      180
                     ],
                     "loc": {
                       "start": {
-                        "line": 3,
+                        "line": 6,
                         "column": 31
                       },
                       "end": {
-                        "line": 10,
+                        "line": 13,
                         "column": 1
                       }
                     }
@@ -165,46 +185,46 @@
                 ],
                 "expressions": [],
                 "range": [
-                  79,
-                  126
+                  133,
+                  180
                 ],
                 "loc": {
                   "start": {
-                    "line": 3,
+                    "line": 6,
                     "column": 31
                   },
                   "end": {
-                    "line": 10,
+                    "line": 13,
                     "column": 1
                   }
                 }
               },
               "range": [
-                70,
-                126
+                124,
+                180
               ],
               "loc": {
                 "start": {
-                  "line": 3,
+                  "line": 6,
                   "column": 22
                 },
                 "end": {
-                  "line": 10,
+                  "line": 13,
                   "column": 1
                 }
               }
             },
             "range": [
-              61,
-              126
+              115,
+              180
             ],
             "loc": {
               "start": {
-                "line": 3,
+                "line": 6,
                 "column": 13
               },
               "end": {
-                "line": 10,
+                "line": 13,
                 "column": 1
               }
             }
@@ -212,38 +232,116 @@
         ],
         "kind": "const",
         "range": [
-          55,
-          127
+          109,
+          181
         ],
         "loc": {
           "start": {
-            "line": 3,
+            "line": 6,
             "column": 7
           },
           "end": {
-            "line": 10,
+            "line": 13,
             "column": 2
           }
         },
-        "leadingComments": [],
-        "trailingComments": []
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * CSS animation for fading in without moving\n ",
+            "range": [
+              48,
+              101
+            ],
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * CSS animation for fading in from the top\n ",
+            "range": [
+              183,
+              234
+            ],
+            "loc": {
+              "start": {
+                "line": 15,
+                "column": 0
+              },
+              "end": {
+                "line": 17,
+                "column": 3
+              }
+            }
+          }
+        ]
       },
       "specifiers": [],
       "source": null,
       "range": [
-        48,
-        127
+        102,
+        181
       ],
       "loc": {
         "start": {
-          "line": 3,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 10,
+          "line": 13,
           "column": 2
         }
-      }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * CSS animation for fading in without moving\n ",
+          "range": [
+            48,
+            101
+          ],
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 0
+            },
+            "end": {
+              "line": 5,
+              "column": 3
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * CSS animation for fading in from the top\n ",
+          "range": [
+            183,
+            234
+          ],
+          "loc": {
+            "start": {
+              "line": 15,
+              "column": 0
+            },
+            "end": {
+              "line": 17,
+              "column": 3
+            }
+          }
+        }
+      ]
     },
     {
       "type": "ExportNamedDeclaration",
@@ -256,16 +354,16 @@
               "type": "Identifier",
               "name": "fadeInTop",
               "range": [
-                142,
-                151
+                248,
+                257
               ],
               "loc": {
                 "start": {
-                  "line": 12,
+                  "line": 18,
                   "column": 13
                 },
                 "end": {
-                  "line": 12,
+                  "line": 18,
                   "column": 22
                 }
               }
@@ -276,16 +374,16 @@
                 "type": "Identifier",
                 "name": "keyframes",
                 "range": [
-                  154,
-                  163
+                  260,
+                  269
                 ],
                 "loc": {
                   "start": {
-                    "line": 12,
+                    "line": 18,
                     "column": 25
                   },
                   "end": {
-                    "line": 12,
+                    "line": 18,
                     "column": 34
                   }
                 }
@@ -301,16 +399,16 @@
                     },
                     "tail": true,
                     "range": [
-                      163,
-                      248
+                      269,
+                      354
                     ],
                     "loc": {
                       "start": {
-                        "line": 12,
+                        "line": 18,
                         "column": 34
                       },
                       "end": {
-                        "line": 21,
+                        "line": 27,
                         "column": 1
                       }
                     }
@@ -318,46 +416,46 @@
                 ],
                 "expressions": [],
                 "range": [
-                  163,
-                  248
+                  269,
+                  354
                 ],
                 "loc": {
                   "start": {
-                    "line": 12,
+                    "line": 18,
                     "column": 34
                   },
                   "end": {
-                    "line": 21,
+                    "line": 27,
                     "column": 1
                   }
                 }
               },
               "range": [
-                154,
-                248
+                260,
+                354
               ],
               "loc": {
                 "start": {
-                  "line": 12,
+                  "line": 18,
                   "column": 25
                 },
                 "end": {
-                  "line": 21,
+                  "line": 27,
                   "column": 1
                 }
               }
             },
             "range": [
-              142,
-              248
+              248,
+              354
             ],
             "loc": {
               "start": {
-                "line": 12,
+                "line": 18,
                 "column": 13
               },
               "end": {
-                "line": 21,
+                "line": 27,
                 "column": 1
               }
             }
@@ -365,38 +463,116 @@
         ],
         "kind": "const",
         "range": [
-          136,
-          249
+          242,
+          355
         ],
         "loc": {
           "start": {
-            "line": 12,
+            "line": 18,
             "column": 7
           },
           "end": {
-            "line": 21,
+            "line": 27,
             "column": 2
           }
         },
-        "leadingComments": [],
-        "trailingComments": []
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * CSS animation for fading in from the top\n ",
+            "range": [
+              183,
+              234
+            ],
+            "loc": {
+              "start": {
+                "line": 15,
+                "column": 0
+              },
+              "end": {
+                "line": 17,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * CSS animation for fading in from the bottom\n ",
+            "range": [
+              357,
+              411
+            ],
+            "loc": {
+              "start": {
+                "line": 29,
+                "column": 0
+              },
+              "end": {
+                "line": 31,
+                "column": 3
+              }
+            }
+          }
+        ]
       },
       "specifiers": [],
       "source": null,
       "range": [
-        129,
-        249
+        235,
+        355
       ],
       "loc": {
         "start": {
-          "line": 12,
+          "line": 18,
           "column": 0
         },
         "end": {
-          "line": 21,
+          "line": 27,
           "column": 2
         }
-      }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * CSS animation for fading in from the top\n ",
+          "range": [
+            183,
+            234
+          ],
+          "loc": {
+            "start": {
+              "line": 15,
+              "column": 0
+            },
+            "end": {
+              "line": 17,
+              "column": 3
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * CSS animation for fading in from the bottom\n ",
+          "range": [
+            357,
+            411
+          ],
+          "loc": {
+            "start": {
+              "line": 29,
+              "column": 0
+            },
+            "end": {
+              "line": 31,
+              "column": 3
+            }
+          }
+        }
+      ]
     },
     {
       "type": "ExportNamedDeclaration",
@@ -409,16 +585,16 @@
               "type": "Identifier",
               "name": "fadeInBottom",
               "range": [
-                264,
-                276
+                425,
+                437
               ],
               "loc": {
                 "start": {
-                  "line": 23,
+                  "line": 32,
                   "column": 13
                 },
                 "end": {
-                  "line": 23,
+                  "line": 32,
                   "column": 25
                 }
               }
@@ -429,16 +605,16 @@
                 "type": "Identifier",
                 "name": "keyframes",
                 "range": [
-                  279,
-                  288
+                  440,
+                  449
                 ],
                 "loc": {
                   "start": {
-                    "line": 23,
+                    "line": 32,
                     "column": 28
                   },
                   "end": {
-                    "line": 23,
+                    "line": 32,
                     "column": 37
                   }
                 }
@@ -454,16 +630,16 @@
                     },
                     "tail": true,
                     "range": [
-                      288,
-                      379
+                      449,
+                      540
                     ],
                     "loc": {
                       "start": {
-                        "line": 23,
+                        "line": 32,
                         "column": 37
                       },
                       "end": {
-                        "line": 32,
+                        "line": 41,
                         "column": 1
                       }
                     }
@@ -471,46 +647,46 @@
                 ],
                 "expressions": [],
                 "range": [
-                  288,
-                  379
+                  449,
+                  540
                 ],
                 "loc": {
                   "start": {
-                    "line": 23,
+                    "line": 32,
                     "column": 37
                   },
                   "end": {
-                    "line": 32,
+                    "line": 41,
                     "column": 1
                   }
                 }
               },
               "range": [
-                279,
-                379
+                440,
+                540
               ],
               "loc": {
                 "start": {
-                  "line": 23,
+                  "line": 32,
                   "column": 28
                 },
                 "end": {
-                  "line": 32,
+                  "line": 41,
                   "column": 1
                 }
               }
             },
             "range": [
-              264,
-              379
+              425,
+              540
             ],
             "loc": {
               "start": {
-                "line": 23,
+                "line": 32,
                 "column": 13
               },
               "end": {
-                "line": 32,
+                "line": 41,
                 "column": 1
               }
             }
@@ -518,38 +694,116 @@
         ],
         "kind": "const",
         "range": [
-          258,
-          380
+          419,
+          541
         ],
         "loc": {
           "start": {
-            "line": 23,
+            "line": 32,
             "column": 7
           },
           "end": {
-            "line": 32,
+            "line": 41,
             "column": 2
           }
         },
-        "leadingComments": [],
-        "trailingComments": []
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * CSS animation for fading in from the bottom\n ",
+            "range": [
+              357,
+              411
+            ],
+            "loc": {
+              "start": {
+                "line": 29,
+                "column": 0
+              },
+              "end": {
+                "line": 31,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * CSS animation for fading in from the left\n ",
+            "range": [
+              543,
+              595
+            ],
+            "loc": {
+              "start": {
+                "line": 43,
+                "column": 0
+              },
+              "end": {
+                "line": 45,
+                "column": 3
+              }
+            }
+          }
+        ]
       },
       "specifiers": [],
       "source": null,
       "range": [
-        251,
-        380
+        412,
+        541
       ],
       "loc": {
         "start": {
-          "line": 23,
+          "line": 32,
           "column": 0
         },
         "end": {
-          "line": 32,
+          "line": 41,
           "column": 2
         }
-      }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * CSS animation for fading in from the bottom\n ",
+          "range": [
+            357,
+            411
+          ],
+          "loc": {
+            "start": {
+              "line": 29,
+              "column": 0
+            },
+            "end": {
+              "line": 31,
+              "column": 3
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * CSS animation for fading in from the left\n ",
+          "range": [
+            543,
+            595
+          ],
+          "loc": {
+            "start": {
+              "line": 43,
+              "column": 0
+            },
+            "end": {
+              "line": 45,
+              "column": 3
+            }
+          }
+        }
+      ]
     },
     {
       "type": "ExportNamedDeclaration",
@@ -562,16 +816,16 @@
               "type": "Identifier",
               "name": "fadeInLeft",
               "range": [
-                395,
-                405
+                609,
+                619
               ],
               "loc": {
                 "start": {
-                  "line": 34,
+                  "line": 46,
                   "column": 13
                 },
                 "end": {
-                  "line": 34,
+                  "line": 46,
                   "column": 23
                 }
               }
@@ -582,16 +836,16 @@
                 "type": "Identifier",
                 "name": "keyframes",
                 "range": [
-                  408,
-                  417
+                  622,
+                  631
                 ],
                 "loc": {
                   "start": {
-                    "line": 34,
+                    "line": 46,
                     "column": 26
                   },
                   "end": {
-                    "line": 34,
+                    "line": 46,
                     "column": 35
                   }
                 }
@@ -607,16 +861,16 @@
                     },
                     "tail": true,
                     "range": [
-                      417,
-                      504
+                      631,
+                      718
                     ],
                     "loc": {
                       "start": {
-                        "line": 34,
+                        "line": 46,
                         "column": 35
                       },
                       "end": {
-                        "line": 43,
+                        "line": 55,
                         "column": 1
                       }
                     }
@@ -624,46 +878,46 @@
                 ],
                 "expressions": [],
                 "range": [
-                  417,
-                  504
+                  631,
+                  718
                 ],
                 "loc": {
                   "start": {
-                    "line": 34,
+                    "line": 46,
                     "column": 35
                   },
                   "end": {
-                    "line": 43,
+                    "line": 55,
                     "column": 1
                   }
                 }
               },
               "range": [
-                408,
-                504
+                622,
+                718
               ],
               "loc": {
                 "start": {
-                  "line": 34,
+                  "line": 46,
                   "column": 26
                 },
                 "end": {
-                  "line": 43,
+                  "line": 55,
                   "column": 1
                 }
               }
             },
             "range": [
-              395,
-              504
+              609,
+              718
             ],
             "loc": {
               "start": {
-                "line": 34,
+                "line": 46,
                 "column": 13
               },
               "end": {
-                "line": 43,
+                "line": 55,
                 "column": 1
               }
             }
@@ -671,38 +925,116 @@
         ],
         "kind": "const",
         "range": [
-          389,
-          505
+          603,
+          719
         ],
         "loc": {
           "start": {
-            "line": 34,
+            "line": 46,
             "column": 7
           },
           "end": {
-            "line": 43,
+            "line": 55,
             "column": 2
           }
         },
-        "leadingComments": [],
-        "trailingComments": []
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * CSS animation for fading in from the left\n ",
+            "range": [
+              543,
+              595
+            ],
+            "loc": {
+              "start": {
+                "line": 43,
+                "column": 0
+              },
+              "end": {
+                "line": 45,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * CSS animation for fading in from the right\n ",
+            "range": [
+              721,
+              774
+            ],
+            "loc": {
+              "start": {
+                "line": 57,
+                "column": 0
+              },
+              "end": {
+                "line": 59,
+                "column": 3
+              }
+            }
+          }
+        ]
       },
       "specifiers": [],
       "source": null,
       "range": [
-        382,
-        505
+        596,
+        719
       ],
       "loc": {
         "start": {
-          "line": 34,
+          "line": 46,
           "column": 0
         },
         "end": {
-          "line": 43,
+          "line": 55,
           "column": 2
         }
-      }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * CSS animation for fading in from the left\n ",
+          "range": [
+            543,
+            595
+          ],
+          "loc": {
+            "start": {
+              "line": 43,
+              "column": 0
+            },
+            "end": {
+              "line": 45,
+              "column": 3
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * CSS animation for fading in from the right\n ",
+          "range": [
+            721,
+            774
+          ],
+          "loc": {
+            "start": {
+              "line": 57,
+              "column": 0
+            },
+            "end": {
+              "line": 59,
+              "column": 3
+            }
+          }
+        }
+      ]
     },
     {
       "type": "ExportNamedDeclaration",
@@ -715,16 +1047,16 @@
               "type": "Identifier",
               "name": "fadeInRight",
               "range": [
-                520,
-                531
+                788,
+                799
               ],
               "loc": {
                 "start": {
-                  "line": 45,
+                  "line": 60,
                   "column": 13
                 },
                 "end": {
-                  "line": 45,
+                  "line": 60,
                   "column": 24
                 }
               }
@@ -735,16 +1067,16 @@
                 "type": "Identifier",
                 "name": "keyframes",
                 "range": [
-                  534,
-                  543
+                  802,
+                  811
                 ],
                 "loc": {
                   "start": {
-                    "line": 45,
+                    "line": 60,
                     "column": 27
                   },
                   "end": {
-                    "line": 45,
+                    "line": 60,
                     "column": 36
                   }
                 }
@@ -760,16 +1092,16 @@
                     },
                     "tail": true,
                     "range": [
-                      543,
-                      632
+                      811,
+                      900
                     ],
                     "loc": {
                       "start": {
-                        "line": 45,
+                        "line": 60,
                         "column": 36
                       },
                       "end": {
-                        "line": 54,
+                        "line": 69,
                         "column": 1
                       }
                     }
@@ -777,46 +1109,46 @@
                 ],
                 "expressions": [],
                 "range": [
-                  543,
-                  632
+                  811,
+                  900
                 ],
                 "loc": {
                   "start": {
-                    "line": 45,
+                    "line": 60,
                     "column": 36
                   },
                   "end": {
-                    "line": 54,
+                    "line": 69,
                     "column": 1
                   }
                 }
               },
               "range": [
-                534,
-                632
+                802,
+                900
               ],
               "loc": {
                 "start": {
-                  "line": 45,
+                  "line": 60,
                   "column": 27
                 },
                 "end": {
-                  "line": 54,
+                  "line": 69,
                   "column": 1
                 }
               }
             },
             "range": [
-              520,
-              632
+              788,
+              900
             ],
             "loc": {
               "start": {
-                "line": 45,
+                "line": 60,
                 "column": 13
               },
               "end": {
-                "line": 54,
+                "line": 69,
                 "column": 1
               }
             }
@@ -824,44 +1156,83 @@
         ],
         "kind": "const",
         "range": [
-          514,
-          633
+          782,
+          901
         ],
         "loc": {
           "start": {
-            "line": 45,
+            "line": 60,
             "column": 7
           },
           "end": {
-            "line": 54,
+            "line": 69,
             "column": 2
           }
         },
-        "leadingComments": [],
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * CSS animation for fading in from the right\n ",
+            "range": [
+              721,
+              774
+            ],
+            "loc": {
+              "start": {
+                "line": 57,
+                "column": 0
+              },
+              "end": {
+                "line": 59,
+                "column": 3
+              }
+            }
+          }
+        ],
         "trailingComments": []
       },
       "specifiers": [],
       "source": null,
       "range": [
-        507,
-        633
+        775,
+        901
       ],
       "loc": {
         "start": {
-          "line": 45,
+          "line": 60,
           "column": 0
         },
         "end": {
-          "line": 54,
+          "line": 69,
           "column": 2
         }
-      }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * CSS animation for fading in from the right\n ",
+          "range": [
+            721,
+            774
+          ],
+          "loc": {
+            "start": {
+              "line": 57,
+              "column": 0
+            },
+            "end": {
+              "line": 59,
+              "column": 3
+            }
+          }
+        }
+      ]
     }
   ],
   "sourceType": "module",
   "range": [
     0,
-    633
+    901
   ],
   "loc": {
     "start": {
@@ -869,9 +1240,100 @@
       "column": 0
     },
     "end": {
-      "line": 54,
+      "line": 69,
       "column": 2
     }
   },
-  "comments": []
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * CSS animation for fading in without moving\n ",
+      "range": [
+        48,
+        101
+      ],
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * CSS animation for fading in from the top\n ",
+      "range": [
+        183,
+        234
+      ],
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 0
+        },
+        "end": {
+          "line": 17,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * CSS animation for fading in from the bottom\n ",
+      "range": [
+        357,
+        411
+      ],
+      "loc": {
+        "start": {
+          "line": 29,
+          "column": 0
+        },
+        "end": {
+          "line": 31,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * CSS animation for fading in from the left\n ",
+      "range": [
+        543,
+        595
+      ],
+      "loc": {
+        "start": {
+          "line": 43,
+          "column": 0
+        },
+        "end": {
+          "line": 45,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * CSS animation for fading in from the right\n ",
+      "range": [
+        721,
+        774
+      ],
+      "loc": {
+        "start": {
+          "line": 57,
+          "column": 0
+        },
+        "end": {
+          "line": 59,
+          "column": 3
+        }
+      }
+    }
+  ]
 }
