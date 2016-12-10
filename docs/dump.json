@@ -1,0 +1,2083 @@
+[
+  {
+    "__docId__": 0,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/Button/index.js",
+    "memberof": null,
+    "longname": "src/components/Button/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import styled from 'styled-components';\n\n\nconst Button = styled.button`\n  background: transparent;\n  border-radius: 3px;\n  border: 1px solid #ccc;\n  box-sizing: border-box;\n  color: #fff;\n  cursor: pointer;\n  font-size: 14px;\n  font-style: italic;\n  font-weight: 100;\n  overflow: hidden;\n  padding: 8px 12px;\n  &:disabled {\n    cursor: not-allowed;\n    opacity: .7;\n  }\n`;\n\nexport default Button;\n"
+  },
+  {
+    "__docId__": 1,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Button",
+    "memberof": "src/components/Button/index.js",
+    "longname": "src/components/Button/index.js~Button",
+    "access": null,
+    "export": true,
+    "importPath": "vimd/src/components/Button/index.js",
+    "importStyle": "Button",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 2,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/ButtonGroup/List.js",
+    "memberof": null,
+    "longname": "src/components/ButtonGroup/List.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import styled from 'styled-components';\n\n\nexport default styled.ul`\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  float: right;\n`;\n"
+  },
+  {
+    "__docId__": 3,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/ButtonGroup/ListItem.js",
+    "memberof": null,
+    "longname": "src/components/ButtonGroup/ListItem.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import styled from 'styled-components';\n\n\nexport default styled.li`\n  display: inline;\n  list-style: none;\n  margin-left: 6px;\n`;\n"
+  },
+  {
+    "__docId__": 4,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/ButtonGroup/index.js",
+    "memberof": null,
+    "longname": "src/components/ButtonGroup/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React from 'react';\nimport styled, { keyframes } from 'styled-components';\n\nimport type { ButtonGroupProps } from './types';\nimport List from './List';\nimport ListItem from './ListItem';\n\n\nexport default function ButtonGroup(props: ButtonGroupProps) {\n  let children = [];\n  props.buttons.forEach((element, index, all) => {\n    children.push(<ListItem key={index}>{element}</ListItem>);\n  });\n  return (<List { ...props }>{children}</List>);\n}\n"
+  },
+  {
+    "__docId__": 5,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "ButtonGroup",
+    "memberof": "src/components/ButtonGroup/index.js",
+    "longname": "src/components/ButtonGroup/index.js~ButtonGroup",
+    "access": null,
+    "export": true,
+    "importPath": "vimd/src/components/ButtonGroup/index.js",
+    "importStyle": "ButtonGroup",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 6,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/ButtonGroup/types.js",
+    "memberof": null,
+    "longname": "src/components/ButtonGroup/types.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 0,
+    "content": "/* @flow */\nexport type ButtonGroupProps = {\n  buttons: [],\n};\n"
+  },
+  {
+    "__docId__": 7,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/Header/Brand.js",
+    "memberof": null,
+    "longname": "src/components/Header/Brand.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import styled, { keyframes } from 'styled-components';\n\nimport { fadeInLeft } from '../../styles/animations';\n\n/**\n * Define styles for the brand name\n */\nexport default styled.h1`\n  animation: ${fadeInLeft} .8s normal forwards;\n  animation-delay: 1s;\n  animation-timing-function: ease-out;\n  color: #fff;\n  font-size: 1.75em;\n  font-style: italic;\n  font-weight: 100;\n  margin: 0 0 0 0px;\n  opacity: 0;\n  pointer-events: none;\n  user-select: none;\n  b {\n    color: rgba(255, 255, 255, .4);\n    font-weight: 100;\n  }\n`;\n"
+  },
+  {
+    "__docId__": 8,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/Header/Button.js",
+    "memberof": null,
+    "longname": "src/components/Header/Button.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import styled from 'styled-components';\n\nimport Button from '../Button';\n\n/**\n * Override the `Button` component with header specific styles\n * \n * TODO: make the underline animate to the opposite side on mouseOut\n */\nexport default styled(Button)`\n  border: none;\n  margin: 0 10px;\n  padding: 0 0 2px 0;\n  position: relative;\n  &::before {\n    background: #fff;\n    bottom: 0;\n    color: transparent;\n    content: ' ';\n    height: 2px;\n    position: absolute;\n    transition: all .2s ease-in-out;\n    width: 0;\n  }\n  &:hover {\n    &::before {\n      width: 100%;\n    }\n  }\n`;\n"
+  },
+  {
+    "__docId__": 9,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/Header/Navigation.js",
+    "memberof": null,
+    "longname": "src/components/Header/Navigation.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import styled, { keyframes } from 'styled-components';\n\nimport ButtonGroup from '../ButtonGroup';\nimport { fadeInTop } from '../../styles/animations';\n\n/**\n * Add a fadeInTop animation to our navigation links\n */\nexport default styled(ButtonGroup)`\n  animation: ${fadeInTop} .6s normal forwards;\n  animation-timing-function: ease-out;\n  animation-delay: 2s;\n  opacity: 0;\n`;\n"
+  },
+  {
+    "__docId__": 10,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/Header/Wrapper.js",
+    "memberof": null,
+    "longname": "src/components/Header/Wrapper.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import styled from 'styled-components';\nimport { Row } from 'hedron';\n\n/**\n * Define styles for the header wrapper\n */\nexport default styled(Row)`\n  background: ${(props) => props.theme.header.background};\n  line-height: 34px;\n  height: ${(props) => props.theme.header.height};\n  max-height: ${(props) => props.theme.header.height};\n`;\n"
+  },
+  {
+    "__docId__": 11,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/Header/Wrapper.test.js",
+    "memberof": null,
+    "longname": "src/components/Header/Wrapper.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React from 'react';\nimport ReactDOM from 'react-dom';\nimport renderer from 'react-test-renderer';\nimport styled, { ThemeProvider } from 'styled-components';\n\nimport Wrapper from './Wrapper';\nimport config from '../../config';\n\nconst theme = require(`../../styles/themes/${config.theme}`).default;\n\n\nit('renders wrapper component', () => {\n  const wrapper = renderer.create(\n    <ThemeProvider theme={theme}>\n      <Wrapper>My content</Wrapper>\n    </ThemeProvider>\n  );\n  let tree = wrapper.toJSON();\n  expect(tree).toMatchSnapshot();\n});\n"
+  },
+  {
+    "__docId__": 12,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "theme",
+    "memberof": "src/components/Header/Wrapper.test.js",
+    "longname": "src/components/Header/Wrapper.test.js~theme",
+    "access": null,
+    "export": false,
+    "importPath": "vimd/src/components/Header/Wrapper.test.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 13,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/Header/index.js",
+    "memberof": null,
+    "longname": "src/components/Header/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/* @flow */\nimport React from 'react';\nimport styled from 'styled-components';\nimport { Row, Column } from 'hedron';\n\nimport Brand from './Brand';\nimport Button from './Button';\nimport Navigation from './Navigation';\nimport Icon from '../Icon';\nimport Wrapper from './Wrapper';\nimport type { HeaderProps } from './types';\n\nconst Col = styled(Column)`\n  padding: 3px;\n`;\n\n/**\n * The `Header` component is responsible for rendering the top bar\n * with the brand name and menu navigation. The background color\n * and height can be set from within the `base.js` theme file.\n * \n * @param {HeaderProps} props\n * @returns React.node\n */\nexport default function Header(props: HeaderProps) {\n  const buttons = [\n    <Icon key='bug' name='bug' href='https://github.com/jsbros/vimd/issues'/>,\n    <Icon key='github' name='github' href='https://github.com/jsbros/vimd'/>,\n    <Button key='save' onClick={props.onSave}>Save</Button>,\n  ];\n  return (\n    <Wrapper>\n      <Col xs={6}>\n        <Brand>Vi<b>MD</b></Brand>\n      </Col>\n      <Col xs={6}>\n        <Navigation buttons={buttons}/>\n      </Col>\n    </Wrapper>\n  );\n}\n"
+  },
+  {
+    "__docId__": 14,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Col",
+    "memberof": "src/components/Header/index.js",
+    "longname": "src/components/Header/index.js~Col",
+    "access": null,
+    "export": false,
+    "importPath": "vimd/src/components/Header/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 15,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "Header",
+    "memberof": "src/components/Header/index.js",
+    "longname": "src/components/Header/index.js~Header",
+    "access": null,
+    "export": true,
+    "importPath": "vimd/src/components/Header/index.js",
+    "importStyle": "Header",
+    "description": "The `Header` component is responsible for rendering the top bar\nwith the brand name and menu navigation. The background color\nand height can be set from within the `base.js` theme file.",
+    "lineNumber": 24,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "React.node"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "HeaderProps"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "props",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "React.node"
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 16,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/Header/index.test.js",
+    "memberof": null,
+    "longname": "src/components/Header/index.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 3,
+    "content": "// import chai from 'chai'\n// import chaiEnzyme from 'chai-enzyme'\nimport React from 'react';\nimport ReactDOM from 'react-dom';\nimport renderer from 'react-test-renderer';\nimport styled, { ThemeProvider } from 'styled-components';\n\nimport Header from '../Header';\nimport Brand from './Brand';\nimport config from '../../config';\n\nconst theme = require(`../../styles/themes/${config.theme}`).default;\n\n\nit('renders header component', () => {\n  const header = renderer.create(\n    <ThemeProvider theme={theme}>\n      <Header />\n    </ThemeProvider>\n  );\n  let tree = header.toJSON();\n  expect(tree).toMatchSnapshot();\n});\n"
+  },
+  {
+    "__docId__": 17,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "theme",
+    "memberof": "src/components/Header/index.test.js",
+    "longname": "src/components/Header/index.test.js~theme",
+    "access": null,
+    "export": false,
+    "importPath": "vimd/src/components/Header/index.test.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 18,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/Header/types.js",
+    "memberof": null,
+    "longname": "src/components/Header/types.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 0,
+    "content": "/* @flow */\nexport type HeaderProps = {\n  onSave: () => {},\n};\n"
+  },
+  {
+    "__docId__": 19,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/Icon/Link.js",
+    "memberof": null,
+    "longname": "src/components/Icon/Link.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/* @flow */\nimport styled from 'styled-components';\n\nimport Link from '../Link';\n\n// override the Link component\nexport default styled(Link)`\n  color: #fff;\n  font-size: 23px;\n  line-height: 25px;\n  position: relative;\n  top: 3px;\n  margin: 0 5px;\n`;\n"
+  },
+  {
+    "__docId__": 20,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/Icon/index.js",
+    "memberof": null,
+    "longname": "src/components/Icon/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/* @flow */\nimport FontAwesome from 'react-fontawesome';\nimport React from 'react';\nimport styled from 'styled-components';\n\nimport type { IconProps } from './types';\nimport Link from './Link';\n\n/**\n * Renders a font-awesome based icon that's a link!\n * \n * @param {IconProps} props\n * @returns\n */\nexport default function Icon(props: IconProps) {\n  return (\n    <Link target='_blank' href={props.href}>\n      <FontAwesome name={props.name} />\n    </Link>\n  );\n}\n"
+  },
+  {
+    "__docId__": 21,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "Icon",
+    "memberof": "src/components/Icon/index.js",
+    "longname": "src/components/Icon/index.js~Icon",
+    "access": null,
+    "export": true,
+    "importPath": "vimd/src/components/Icon/index.js",
+    "importStyle": "Icon",
+    "description": "Renders a font-awesome based icon that's a link!",
+    "lineNumber": 13,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "IconProps"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "props",
+        "description": ""
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 22,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/Icon/types.js",
+    "memberof": null,
+    "longname": "src/components/Icon/types.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 0,
+    "content": "/* @flow */\nexport type IconProps = {\n  name: string,\n  href: string,\n};\n"
+  },
+  {
+    "__docId__": 23,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/Link/index.js",
+    "memberof": null,
+    "longname": "src/components/Link/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/* @flow */\nimport styled from 'styled-components';\n\n// override the Link component\nconst Link = styled.a`\n  color: #fff;\n  font-size: 23px;\n  line-height: 25px;\n  position: relative;\n  top: 3px;\n  margin: 0 5px;\n`;\n\nexport default Link;\n"
+  },
+  {
+    "__docId__": 24,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Link",
+    "memberof": "src/components/Link/index.js",
+    "longname": "src/components/Link/index.js~Link",
+    "access": null,
+    "export": true,
+    "importPath": "vimd/src/components/Link/index.js",
+    "importStyle": "Link",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 25,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/Preview/index.js",
+    "memberof": null,
+    "longname": "src/components/Preview/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import styled from 'styled-components';\nimport { Column } from 'hedron';\nimport { fadeIn } from '../../styles/animations';\n\nexport default styled(Column)`\n  animation-delay: .25s;\n  animation-timing-function: ease-out;\n  animation: ${fadeIn} 2s normal forwards;\n  max-height: calc(100vh - ${(props) => props.theme.header.height});\n  opacity: 0;\n  overflow: scroll;\n  word-wrap: break-word;\n`;\n"
+  },
+  {
+    "__docId__": 26,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/Preview/index.test.js",
+    "memberof": null,
+    "longname": "src/components/Preview/index.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React from 'react';\nimport ReactDOM from 'react-dom';\nimport renderer from 'react-test-renderer';\nimport { ThemeProvider } from 'styled-components';\n\nimport Preview from '../Preview';\nimport config from '../../config';\n\nconst theme = require(`../../styles/themes/${config.theme}`).default;\n\n\nit('renders empty preview component', () => {\n  const preview = renderer.create(\n    <ThemeProvider theme={theme}>\n      <Preview/>\n    </ThemeProvider>\n  );\n  let tree = preview.toJSON();\n  expect(tree).toMatchSnapshot();\n});\n\n\nit('renders preview component with content', () => {\n  const text = 'hello world!';\n  const preview = renderer.create(\n    <ThemeProvider theme={theme}>\n      <Preview markdown={text}/>\n    </ThemeProvider>\n  );\n  let tree = preview.toJSON();\n  expect(tree).toMatchSnapshot();\n});\n"
+  },
+  {
+    "__docId__": 27,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "theme",
+    "memberof": "src/components/Preview/index.test.js",
+    "longname": "src/components/Preview/index.test.js~theme",
+    "access": null,
+    "export": false,
+    "importPath": "vimd/src/components/Preview/index.test.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 28,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/config/index.js",
+    "memberof": null,
+    "longname": "src/config/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "export default {\n    theme: 'cobalt',\n};\n"
+  },
+  {
+    "__docId__": 29,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/containers/AppPage/index.js",
+    "memberof": null,
+    "longname": "src/containers/AppPage/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/* @flow */\nimport base64 from 'base-64';\nimport Dropzone from 'react-dropzone';\nimport React, { PureComponent } from 'react';\nimport styled from 'styled-components';\nimport { Page, Row, Column } from 'hedron';\n\nimport config from '../../config';\nimport Editor from '../Editor';\nimport Header from '../../components/Header';\nimport Preview from '../../components/Preview';\nimport { processMarkdown, downloadMarkdown } from '../../utils';\n\n// import the site's theme parameters\nconst theme = require(`../../styles/themes/${config.theme}`).default;\n\n// import the required dependencies for our [br]ace editor.\nimport 'brace/mode/markdown';\n// unfortunately the import statement doesn't allow variables\n// to be used with it. So we need to use `require` to import\n// the dynamically-set ace editor theme.\nrequire(`brace/theme/${theme.editor.theme}`);\nimport 'brace/keybinding/vim';\n\n// TODO: resolve the below 'module not found' flow error\nconst ReadMe = require('../../translations/README/en.md');\nconst parts = ReadMe.split(',');\nconst Docs = base64.decode(parts[parts.length-1]);\n\n/**\n * This is the main component for the application.\n *\n * @class App\n * @extends {PureComponent}\n */\nexport default class AppPage extends PureComponent {\n  // define our state types\n  state: {\n    markdown: string,\n  };\n  // this gets run once, when the component initially mounts.\n  componentWillMount() {\n    // set the initial state\n    this.state = {\n      // write some sample markdown to our state\n      markdown: Docs,\n    };\n    // bind(this) allows `this` to be used from within our functions\n    this.download = this.download.bind(this);\n    this.editorChanged = this.editorChanged.bind(this);\n  }\n  download: () => {};\n  editorChanged: (newVal: string) => {};\n\n  /**\n   * This gets triggered the user pressed the save button.\n   *\n   * @memberOf App\n   */\n  download(): void {\n    return downloadMarkdown(this.state.markdown);\n  }\n\n  /**\n   * Callback for the editor's `onChange` action.\n   * \n   * @param {string} newVal\n   * \n   * @memberOf AppPage\n   */\n  editorChanged(newVal: string): void {\n    this.setState({ markdown: newVal });\n  }\n\n  render() {\n    return (\n      <Page fluid>\n        <Header onSave={this.download}/>\n        <Editor onChange={this.editorChanged} code={this.state.markdown} />\n      </Page>\n    );\n  }\n}\n"
+  },
+  {
+    "__docId__": 30,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "theme",
+    "memberof": "src/containers/AppPage/index.js",
+    "longname": "src/containers/AppPage/index.js~theme",
+    "access": null,
+    "export": false,
+    "importPath": "vimd/src/containers/AppPage/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 31,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "ReadMe",
+    "memberof": "src/containers/AppPage/index.js",
+    "longname": "src/containers/AppPage/index.js~ReadMe",
+    "access": null,
+    "export": false,
+    "importPath": "vimd/src/containers/AppPage/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 32,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "parts",
+    "memberof": "src/containers/AppPage/index.js",
+    "longname": "src/containers/AppPage/index.js~parts",
+    "access": null,
+    "export": false,
+    "importPath": "vimd/src/containers/AppPage/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 33,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Docs",
+    "memberof": "src/containers/AppPage/index.js",
+    "longname": "src/containers/AppPage/index.js~Docs",
+    "access": null,
+    "export": false,
+    "importPath": "vimd/src/containers/AppPage/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 34,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "AppPage",
+    "memberof": "src/containers/AppPage/index.js",
+    "longname": "src/containers/AppPage/index.js~AppPage",
+    "access": null,
+    "export": true,
+    "importPath": "vimd/src/containers/AppPage/index.js",
+    "importStyle": "AppPage",
+    "description": "This is the main component for the application.",
+    "lineNumber": 35,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "App"
+      }
+    ],
+    "interface": false,
+    "extends": [
+      "PureComponent"
+    ]
+  },
+  {
+    "__docId__": 35,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "componentWillMount",
+    "memberof": "src/containers/AppPage/index.js~AppPage",
+    "longname": "src/containers/AppPage/index.js~AppPage#componentWillMount",
+    "access": null,
+    "description": null,
+    "lineNumber": 37,
+    "undocument": true,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 36,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "state",
+    "memberof": "src/containers/AppPage/index.js~AppPage",
+    "longname": "src/containers/AppPage/index.js~AppPage#state",
+    "access": null,
+    "description": null,
+    "lineNumber": 39,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 37,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "download",
+    "memberof": "src/containers/AppPage/index.js~AppPage",
+    "longname": "src/containers/AppPage/index.js~AppPage#download",
+    "access": null,
+    "description": null,
+    "lineNumber": 44,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 38,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "editorChanged",
+    "memberof": "src/containers/AppPage/index.js~AppPage",
+    "longname": "src/containers/AppPage/index.js~AppPage#editorChanged",
+    "access": null,
+    "description": null,
+    "lineNumber": 45,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 39,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "download",
+    "memberof": "src/containers/AppPage/index.js~AppPage",
+    "longname": "src/containers/AppPage/index.js~AppPage#download",
+    "access": null,
+    "description": "This gets triggered the user pressed the save button.",
+    "lineNumber": 55,
+    "unknown": [
+      {
+        "tagName": "@memberOf",
+        "tagValue": "App"
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 40,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "editorChanged",
+    "memberof": "src/containers/AppPage/index.js~AppPage",
+    "longname": "src/containers/AppPage/index.js~AppPage#editorChanged",
+    "access": null,
+    "description": "Callback for the editor's `onChange` action.",
+    "lineNumber": 66,
+    "unknown": [
+      {
+        "tagName": "@memberOf",
+        "tagValue": "AppPage"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "newVal",
+        "description": ""
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 41,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "render",
+    "memberof": "src/containers/AppPage/index.js~AppPage",
+    "longname": "src/containers/AppPage/index.js~AppPage#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 70,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 42,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/containers/AppPage/index.t.js",
+    "memberof": null,
+    "longname": "src/containers/AppPage/index.t.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React from 'react';\nimport ReactDOM from 'react-dom';\nimport AppPage from '../AppPage';\n\nit('renders without crashing', () => {\n  const div = document.createElement('div');\n  ReactDOM.render(<AppPage />, div);\n});\n"
+  },
+  {
+    "__docId__": 43,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/containers/Editor/Dropzone.js",
+    "memberof": null,
+    "longname": "src/containers/Editor/Dropzone.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Dropzone from 'react-dropzone';\nimport styled from 'styled-components';\n\nexport default styled(Dropzone)`\n  opacity: 1;\n  &.active {\n    opacity: .6;\n  }\n`;\n"
+  },
+  {
+    "__docId__": 44,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/containers/Editor/index.js",
+    "memberof": null,
+    "longname": "src/containers/Editor/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/* @flow */\nimport AceEditor from 'react-ace';\nimport base64 from 'base-64';\nimport React, { PureComponent } from 'react';\nimport styled from 'styled-components';\nimport { Row, Column } from 'hedron';\n\n// import our site's theme\nimport Dropzone from './Dropzone';\nimport Preview from '../../components/Preview';\nimport config from '../../config';\nimport { processMarkdown, downloadMarkdown } from '../../utils';\n\nconst theme = require(`../../styles/themes/${config.theme}`).default;\n\n/**\n * This is the container for the dual pane markdown editor\n *\n * @class Editor\n * @extends {PureComponent}\n */\nexport default class Editor extends PureComponent {\n  componentWillMount() {\n    // bind(this) allows `this` to be used from within the onDrop() function\n    this.onDrop = this.onDrop.bind(this);\n  }\n  // define our component's flow types\n  onDrop: () => {};\n  props: {\n    code: string,\n    onChange: (string) => {},\n  };\n\n  /**\n   * This gets triggered the user drops a file in the window.\n   *\n   * @param {[]} files\n   * \n   * @memberOf Editor\n   */\n  onDrop(files: []): void {\n    const blob = files[0];\n    const reader = new FileReader();\n    reader.addEventListener('loadend', (e) => {\n      this.setState({ code: e.target.result });\n    });\n    reader.readAsText(blob);\n  }\n\n  render() {\n    let options = {\n      fontFamily: 'Monaco, monospace',\n      showLineNumbers: false,\n      showGutter: false,\n    };\n    return (\n      <Dropzone onDrop={this.onDrop} disableClick activeClassName='active'>\n        <Row>\n          <Column fluid xs={6}>\n            <AceEditor\n              mode='markdown'\n              theme={theme.editor.theme}\n              onChange={this.props.onChange}\n              value={this.props.code}\n              name='editor'\n              editorProps={{ $blockScrolling: true }}\n              keyboardHandler='vim'\n              width='100%'\n              height={`calc(100vh - ${theme.header.height})`}\n              fontSize={18}\n              setOptions={options}\n              wrapEnabled\n            />\n          </Column>\n          <Preview xs={6} dangerouslySetInnerHTML={{ __html: processMarkdown(this.props.code) }} />\n        </Row>\n      </Dropzone>\n    );\n  }\n}\n"
+  },
+  {
+    "__docId__": 45,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "theme",
+    "memberof": "src/containers/Editor/index.js",
+    "longname": "src/containers/Editor/index.js~theme",
+    "access": null,
+    "export": false,
+    "importPath": "vimd/src/containers/Editor/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 46,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Editor",
+    "memberof": "src/containers/Editor/index.js",
+    "longname": "src/containers/Editor/index.js~Editor",
+    "access": null,
+    "export": true,
+    "importPath": "vimd/src/containers/Editor/index.js",
+    "importStyle": "Editor",
+    "description": "This is the container for the dual pane markdown editor",
+    "lineNumber": 21,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "Editor"
+      }
+    ],
+    "interface": false,
+    "extends": [
+      "PureComponent"
+    ]
+  },
+  {
+    "__docId__": 47,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "componentWillMount",
+    "memberof": "src/containers/Editor/index.js~Editor",
+    "longname": "src/containers/Editor/index.js~Editor#componentWillMount",
+    "access": null,
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 48,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "onDrop",
+    "memberof": "src/containers/Editor/index.js~Editor",
+    "longname": "src/containers/Editor/index.js~Editor#onDrop",
+    "access": null,
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 49,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "onDrop",
+    "memberof": "src/containers/Editor/index.js~Editor",
+    "longname": "src/containers/Editor/index.js~Editor#onDrop",
+    "access": null,
+    "description": "This gets triggered the user drops a file in the window.",
+    "lineNumber": 36,
+    "unknown": [
+      {
+        "tagName": "@memberOf",
+        "tagValue": "Editor"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "[]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "files",
+        "description": ""
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 50,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "render",
+    "memberof": "src/containers/Editor/index.js~Editor",
+    "longname": "src/containers/Editor/index.js~Editor#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 45,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 51,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/containers/Editor/index.test.js",
+    "memberof": null,
+    "longname": "src/containers/Editor/index.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React from 'react';\nimport ReactDOM from 'react-dom';\nimport renderer from 'react-test-renderer';\nimport { ThemeProvider } from 'styled-components';\n\n// TODO: create real tests for the `Editor` container\n// I cannot currently figure out how to properly test\n// the editor with jest. The brace editor throws an error\n// due to `window` not being defined.\n\n// import Editor from '../Editor';\n\nit('renders without crashing', () => {\n  // const div = document.createElement('div');\n  // ReactDOM.render(<Editor code='hello world' />, div);\n\n  // const header = renderer.create(<Editor />);\n  // let tree = header.toJSON();\n  // expect(tree).toMatchSnapshot();\n});\n"
+  },
+  {
+    "__docId__": 52,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/index.js",
+    "memberof": null,
+    "longname": "src/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React from 'react';\nimport ReactDOM from 'react-dom';\nimport styled, { ThemeProvider } from 'styled-components';\n\n// import our App component\nimport AppPage from './containers/AppPage';\n// import our global styles\nimport './styles/global';\n// import our site's theme\nimport config from './config';\nconst theme = require(`./styles/themes/${config.theme}`).default;\n\n/**\n * This is the top level render function\n * \n * Our initial page is the `AppPage`. It's wrapped inside\n * a `ThemeProvider` so that all the children styled using\n * `styled-components` will automatically be able to inherit\n * from the current site theme.\n */\nReactDOM.render(\n  <ThemeProvider theme={theme}>\n    <AppPage />\n  </ThemeProvider>,\n  document.getElementById('root')\n);\n"
+  },
+  {
+    "__docId__": 53,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "theme",
+    "memberof": "src/index.js",
+    "longname": "src/index.js~theme",
+    "access": null,
+    "export": false,
+    "importPath": "vimd/src/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/styles/animations.js",
+    "memberof": null,
+    "longname": "src/styles/animations.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { keyframes } from 'styled-components';\n\nexport const fadeIn = keyframes`\n0% {\n  opacity: 0;\n}\n100% {\n  opacity: 1;\n}\n`;\n\nexport const fadeInTop = keyframes`\n0% {\n  opacity: 0;\n  margin-top: -25px;\n}\n100% {\n  opacity: 1;\n  margin-top: 0;\n}\n`;\n\nexport const fadeInBottom = keyframes`\n0% {\n  opacity: 0;\n  margin-bottom: -25px;\n}\n100% {\n  opacity: 1;\n  margin-bottom: 0;\n}\n`;\n\nexport const fadeInLeft = keyframes`\n0% {\n  opacity: 0;\n  margin-left: -25px;\n}\n100% {\n  opacity: 1;\n  margin-left: 0;\n}\n`;\n\nexport const fadeInRight = keyframes`\n0% {\n  opacity: 0;\n  margin-right: -25px;\n}\n100% {\n  opacity: 1;\n  margin-right: 0;\n}\n`;\n"
+  },
+  {
+    "__docId__": 55,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "fadeIn",
+    "memberof": "src/styles/animations.js",
+    "longname": "src/styles/animations.js~fadeIn",
+    "access": null,
+    "export": true,
+    "importPath": "vimd/src/styles/animations.js",
+    "importStyle": "{fadeIn}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 56,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "fadeInTop",
+    "memberof": "src/styles/animations.js",
+    "longname": "src/styles/animations.js~fadeInTop",
+    "access": null,
+    "export": true,
+    "importPath": "vimd/src/styles/animations.js",
+    "importStyle": "{fadeInTop}",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 57,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "fadeInBottom",
+    "memberof": "src/styles/animations.js",
+    "longname": "src/styles/animations.js~fadeInBottom",
+    "access": null,
+    "export": true,
+    "importPath": "vimd/src/styles/animations.js",
+    "importStyle": "{fadeInBottom}",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 58,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "fadeInLeft",
+    "memberof": "src/styles/animations.js",
+    "longname": "src/styles/animations.js~fadeInLeft",
+    "access": null,
+    "export": true,
+    "importPath": "vimd/src/styles/animations.js",
+    "importStyle": "{fadeInLeft}",
+    "description": null,
+    "lineNumber": 34,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "fadeInRight",
+    "memberof": "src/styles/animations.js",
+    "longname": "src/styles/animations.js~fadeInRight",
+    "access": null,
+    "export": true,
+    "importPath": "vimd/src/styles/animations.js",
+    "importStyle": "{fadeInRight}",
+    "description": null,
+    "lineNumber": 45,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 60,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/styles/global.js",
+    "memberof": null,
+    "longname": "src/styles/global.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { injectGlobal } from 'styled-components';\n\nexport default injectGlobal`\n  body {\n    margin: 0;\n    padding: 0;\n    font-family: sans-serif;\n    font-weight: 300;\n  }\n`;\n"
+  },
+  {
+    "__docId__": 61,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/styles/themes/base.js",
+    "memberof": null,
+    "longname": "src/styles/themes/base.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 10,
+    "content": "/* @flow */\nimport type { Theme } from '../../types';\n\n/**\n * This is the base theme.\n * \n * All other themes should extend this.\n * To see the available parameters, take\n * a look at the `types.js` file.\n */\nconst base: Theme = {\n  header: {\n    height: '44px',\n  },\n  editor: {\n  },\n};\n\nexport default base;\n"
+  },
+  {
+    "__docId__": 62,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "base",
+    "memberof": "src/styles/themes/base.js",
+    "longname": "src/styles/themes/base.js~base",
+    "access": null,
+    "export": true,
+    "importPath": "vimd/src/styles/themes/base.js",
+    "importStyle": "base",
+    "description": "This is the base theme.\n\nAll other themes should extend this.\nTo see the available parameters, take\na look at the `types.js` file.",
+    "lineNumber": 10,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 63,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/styles/themes/cobalt.js",
+    "memberof": null,
+    "longname": "src/styles/themes/cobalt.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/* @flow */\nimport _ from 'lodash';\nimport type { Theme } from '../../types';\nimport base from './base';\n\n/**\n * Cobalt Theme\n */\nconst cobalt: Theme = {\n  header: {\n    background: '#00223E',\n  },\n  editor: {\n    theme: 'cobalt',\n  },\n};\n\nexport default _.merge({}, base, cobalt);\n"
+  },
+  {
+    "__docId__": 64,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "cobalt",
+    "memberof": "src/styles/themes/cobalt.js",
+    "longname": "src/styles/themes/cobalt.js~cobalt",
+    "access": null,
+    "export": false,
+    "importPath": "vimd/src/styles/themes/cobalt.js",
+    "importStyle": null,
+    "description": "Cobalt Theme",
+    "lineNumber": 8,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 65,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/styles/themes/index.js",
+    "memberof": null,
+    "longname": "src/styles/themes/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import cobalt from './cobalt';\nimport tomorrow_night from './tomorrow_night';\nimport twilight from './twilight';\n\nexport default {\n    cobalt,\n    tomorrow_night,\n    twilight,\n};\n"
+  },
+  {
+    "__docId__": 66,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/styles/themes/tomorrow_night.js",
+    "memberof": null,
+    "longname": "src/styles/themes/tomorrow_night.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/* @flow */\nimport _ from 'lodash';\nimport type { Theme } from '../../types';\nimport base from './base';\n\n/**\n * Tomorrow Night Theme\n */\nconst tomorrow_night: Theme = {\n  header: {\n    background: '#1D1F21',\n  },\n  editor: {\n    theme: 'tomorrow_night',\n  },\n};\n\nexport default _.merge({}, base, tomorrow_night);\n"
+  },
+  {
+    "__docId__": 67,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "tomorrow_night",
+    "memberof": "src/styles/themes/tomorrow_night.js",
+    "longname": "src/styles/themes/tomorrow_night.js~tomorrow_night",
+    "access": null,
+    "export": false,
+    "importPath": "vimd/src/styles/themes/tomorrow_night.js",
+    "importStyle": null,
+    "description": "Tomorrow Night Theme",
+    "lineNumber": 8,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 68,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/styles/themes/twilight.js",
+    "memberof": null,
+    "longname": "src/styles/themes/twilight.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/* @flow */\nimport _ from 'lodash';\nimport type { Theme } from '../../types';\nimport base from './base';\n\n/**\n * Twilight Theme\n */\nconst twilight: Theme = {\n  header: {\n    background: '#1D1F21',\n  },\n  editor: {\n    theme: 'twilight',\n  },\n};\n\nexport default _.merge({}, base, twilight);\n"
+  },
+  {
+    "__docId__": 69,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "twilight",
+    "memberof": "src/styles/themes/twilight.js",
+    "longname": "src/styles/themes/twilight.js~twilight",
+    "access": null,
+    "export": false,
+    "importPath": "vimd/src/styles/themes/twilight.js",
+    "importStyle": null,
+    "description": "Twilight Theme",
+    "lineNumber": 8,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 70,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/types.js",
+    "memberof": null,
+    "longname": "src/types.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 0,
+    "content": "/* @flow */\nexport type Theme = {\n  header: {\n    background?: string,\n    height?: string,\n  },\n  editor: {\n    theme?: string,\n  },\n};\n"
+  },
+  {
+    "__docId__": 71,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/utils/download.js",
+    "memberof": null,
+    "longname": "src/utils/download.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/* @flow */\nimport dateFormat from 'dateformat';\nimport inBrowserDownload from 'in-browser-download';\n\n/**\n * Downloads a markdown file in the browser with the current\n * contents of the editor. The filename is taken from the\n * current date+time.\n * \n * @param {string} content\n */\nexport default function download(content: string): void {\n    // get a formatted string of the current datetime\n    const filename = dateFormat(new Date(), 'yyyy-mm-dd-hh.MM.ss');\n    // download the editor contents in a markdown file.\n    inBrowserDownload(content, `${filename}.md`);\n}\n"
+  },
+  {
+    "__docId__": 72,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "download",
+    "memberof": "src/utils/download.js",
+    "longname": "src/utils/download.js~download",
+    "access": null,
+    "export": true,
+    "importPath": "vimd/src/utils/download.js",
+    "importStyle": "download",
+    "description": "Downloads a markdown file in the browser with the current\ncontents of the editor. The filename is taken from the\ncurrent date+time.",
+    "lineNumber": 11,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "content",
+        "description": ""
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 73,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/utils/index.js",
+    "memberof": null,
+    "longname": "src/utils/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import downloadMarkdown from './download';\nimport processMarkdown from './process';\n\nexport {\n    downloadMarkdown,\n    processMarkdown,\n};\n"
+  },
+  {
+    "__docId__": 74,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/utils/process.js",
+    "memberof": null,
+    "longname": "src/utils/process.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import marked from 'marked';\n\nexport default function processMarkdown(source) {\n  marked.setOptions({\n    renderer: new marked.Renderer(),\n    gfm: true,\n    tables: true,\n    breaks: false,\n    pedantic: false,\n    sanitize: true,\n    smartLists: true,\n    smartypants: false,\n  });\n  return marked(source);\n}\n"
+  },
+  {
+    "__docId__": 75,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "processMarkdown",
+    "memberof": "src/utils/process.js",
+    "longname": "src/utils/process.js~processMarkdown",
+    "access": null,
+    "export": true,
+    "importPath": "vimd/src/utils/process.js",
+    "importStyle": "processMarkdown",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "params": [
+      {
+        "name": "source",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 77,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Infinity",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 78,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~NaN",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 79,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~undefined",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 80,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~null",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 81,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 82,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 83,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 84,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 85,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 86,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 87,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Symbol",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 88,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Error",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 89,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~EvalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 90,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~InternalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 91,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RangeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 92,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ReferenceError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 93,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~SyntaxError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 94,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~TypeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 95,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~URIError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 96,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 97,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 98,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Date",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 99,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~String",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 100,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~string",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 101,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RegExp",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 102,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 103,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 104,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 105,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8ClampedArray",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 106,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 107,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 108,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 109,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 110,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 111,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float64Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 112,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Map",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 113,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Set",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 114,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakMap",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 115,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakSet",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 116,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ArrayBuffer",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 117,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~DataView",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 118,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~JSON",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 119,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Promise",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 120,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Generator",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 121,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~GeneratorFunction",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 122,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Reflect",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 123,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Proxy",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 125,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "CanvasRenderingContext2D",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~CanvasRenderingContext2D",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 126,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "DocumentFragment",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~DocumentFragment",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 127,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Element",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Element",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Element",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 128,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Event",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Event",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Event",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 129,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Node",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Node",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Node",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 130,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "NodeList",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~NodeList",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 131,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "XMLHttpRequest",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~XMLHttpRequest",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 132,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "AudioContext",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/AudioContext",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~AudioContext",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  }
+]

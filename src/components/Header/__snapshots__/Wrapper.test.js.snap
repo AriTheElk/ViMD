@@ -1,0 +1,6 @@
+exports[`test renders wrapper component 1`] = `
+<section
+  className="kjaKCP fNeyiY">
+  My content
+</section>
+`;

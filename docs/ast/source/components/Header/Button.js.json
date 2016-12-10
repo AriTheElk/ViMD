@@ -1,0 +1,378 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "styled",
+            "range": [
+              7,
+              13
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 7
+              },
+              "end": {
+                "line": 1,
+                "column": 13
+              }
+            }
+          },
+          "range": [
+            7,
+            13
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 7
+            },
+            "end": {
+              "line": 1,
+              "column": 13
+            }
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "styled-components",
+        "raw": "'styled-components'",
+        "range": [
+          19,
+          38
+        ],
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 19
+          },
+          "end": {
+            "line": 1,
+            "column": 38
+          }
+        }
+      },
+      "range": [
+        0,
+        39
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "Button",
+            "range": [
+              48,
+              54
+            ],
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 7
+              },
+              "end": {
+                "line": 3,
+                "column": 13
+              }
+            }
+          },
+          "range": [
+            48,
+            54
+          ],
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 7
+            },
+            "end": {
+              "line": 3,
+              "column": 13
+            }
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "../Button",
+        "raw": "'../Button'",
+        "range": [
+          60,
+          71
+        ],
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 19
+          },
+          "end": {
+            "line": 3,
+            "column": 30
+          }
+        }
+      },
+      "range": [
+        41,
+        72
+      ],
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 31
+        }
+      },
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Override the `Button` component with header specific styles\n * \n * TODO: make the underline animate to the opposite side on mouseOut\n ",
+          "range": [
+            74,
+            217
+          ],
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 0
+            },
+            "end": {
+              "line": 9,
+              "column": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportDefaultDeclaration",
+      "declaration": {
+        "type": "TaggedTemplateExpression",
+        "tag": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "styled",
+            "range": [
+              233,
+              239
+            ],
+            "loc": {
+              "start": {
+                "line": 10,
+                "column": 15
+              },
+              "end": {
+                "line": 10,
+                "column": 21
+              }
+            }
+          },
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "Button",
+              "range": [
+                240,
+                246
+              ],
+              "loc": {
+                "start": {
+                  "line": 10,
+                  "column": 22
+                },
+                "end": {
+                  "line": 10,
+                  "column": 28
+                }
+              }
+            }
+          ],
+          "range": [
+            233,
+            247
+          ],
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 15
+            },
+            "end": {
+              "line": 10,
+              "column": 29
+            }
+          }
+        },
+        "quasi": {
+          "type": "TemplateLiteral",
+          "quasis": [
+            {
+              "type": "TemplateElement",
+              "value": {
+                "raw": "\n  border: none;\n  margin: 0 10px;\n  padding: 0 0 2px 0;\n  position: relative;\n  &::before {\n    background: #fff;\n    bottom: 0;\n    color: transparent;\n    content: ' ';\n    height: 2px;\n    position: absolute;\n    transition: all .2s ease-in-out;\n    width: 0;\n  }\n  &:hover {\n    &::before {\n      width: 100%;\n    }\n  }\n",
+                "cooked": "\n  border: none;\n  margin: 0 10px;\n  padding: 0 0 2px 0;\n  position: relative;\n  &::before {\n    background: #fff;\n    bottom: 0;\n    color: transparent;\n    content: ' ';\n    height: 2px;\n    position: absolute;\n    transition: all .2s ease-in-out;\n    width: 0;\n  }\n  &:hover {\n    &::before {\n      width: 100%;\n    }\n  }\n"
+              },
+              "tail": true,
+              "range": [
+                247,
+                574
+              ],
+              "loc": {
+                "start": {
+                  "line": 10,
+                  "column": 29
+                },
+                "end": {
+                  "line": 30,
+                  "column": 1
+                }
+              }
+            }
+          ],
+          "expressions": [],
+          "range": [
+            247,
+            574
+          ],
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 29
+            },
+            "end": {
+              "line": 30,
+              "column": 1
+            }
+          }
+        },
+        "range": [
+          233,
+          574
+        ],
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 15
+          },
+          "end": {
+            "line": 30,
+            "column": 1
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Override the `Button` component with header specific styles\n * \n * TODO: make the underline animate to the opposite side on mouseOut\n ",
+            "range": [
+              74,
+              217
+            ],
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 9,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": []
+      },
+      "range": [
+        218,
+        575
+      ],
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 0
+        },
+        "end": {
+          "line": 30,
+          "column": 2
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Override the `Button` component with header specific styles\n * \n * TODO: make the underline animate to the opposite side on mouseOut\n ",
+          "range": [
+            74,
+            217
+          ],
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 0
+            },
+            "end": {
+              "line": 9,
+              "column": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    0,
+    575
+  ],
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 30,
+      "column": 2
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * Override the `Button` component with header specific styles\n * \n * TODO: make the underline animate to the opposite side on mouseOut\n ",
+      "range": [
+        74,
+        217
+      ],
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 9,
+          "column": 3
+        }
+      }
+    }
+  ]
+}

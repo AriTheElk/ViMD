@@ -1,0 +1,877 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "keyframes",
+            "range": [
+              9,
+              18
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 9
+              },
+              "end": {
+                "line": 1,
+                "column": 18
+              }
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "keyframes",
+            "range": [
+              9,
+              18
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 9
+              },
+              "end": {
+                "line": 1,
+                "column": 18
+              }
+            }
+          },
+          "range": [
+            9,
+            18
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 9
+            },
+            "end": {
+              "line": 1,
+              "column": 18
+            }
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "styled-components",
+        "raw": "'styled-components'",
+        "range": [
+          26,
+          45
+        ],
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 26
+          },
+          "end": {
+            "line": 1,
+            "column": 45
+          }
+        }
+      },
+      "range": [
+        0,
+        46
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 46
+        }
+      }
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "fadeIn",
+              "range": [
+                61,
+                67
+              ],
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 13
+                },
+                "end": {
+                  "line": 3,
+                  "column": 19
+                }
+              }
+            },
+            "init": {
+              "type": "TaggedTemplateExpression",
+              "tag": {
+                "type": "Identifier",
+                "name": "keyframes",
+                "range": [
+                  70,
+                  79
+                ],
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 22
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 31
+                  }
+                }
+              },
+              "quasi": {
+                "type": "TemplateLiteral",
+                "quasis": [
+                  {
+                    "type": "TemplateElement",
+                    "value": {
+                      "raw": "\n0% {\n  opacity: 0;\n}\n100% {\n  opacity: 1;\n}\n",
+                      "cooked": "\n0% {\n  opacity: 0;\n}\n100% {\n  opacity: 1;\n}\n"
+                    },
+                    "tail": true,
+                    "range": [
+                      79,
+                      126
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 3,
+                        "column": 31
+                      },
+                      "end": {
+                        "line": 10,
+                        "column": 1
+                      }
+                    }
+                  }
+                ],
+                "expressions": [],
+                "range": [
+                  79,
+                  126
+                ],
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 31
+                  },
+                  "end": {
+                    "line": 10,
+                    "column": 1
+                  }
+                }
+              },
+              "range": [
+                70,
+                126
+              ],
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 22
+                },
+                "end": {
+                  "line": 10,
+                  "column": 1
+                }
+              }
+            },
+            "range": [
+              61,
+              126
+            ],
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 13
+              },
+              "end": {
+                "line": 10,
+                "column": 1
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          55,
+          127
+        ],
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 7
+          },
+          "end": {
+            "line": 10,
+            "column": 2
+          }
+        },
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        48,
+        127
+      ],
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 10,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "fadeInTop",
+              "range": [
+                142,
+                151
+              ],
+              "loc": {
+                "start": {
+                  "line": 12,
+                  "column": 13
+                },
+                "end": {
+                  "line": 12,
+                  "column": 22
+                }
+              }
+            },
+            "init": {
+              "type": "TaggedTemplateExpression",
+              "tag": {
+                "type": "Identifier",
+                "name": "keyframes",
+                "range": [
+                  154,
+                  163
+                ],
+                "loc": {
+                  "start": {
+                    "line": 12,
+                    "column": 25
+                  },
+                  "end": {
+                    "line": 12,
+                    "column": 34
+                  }
+                }
+              },
+              "quasi": {
+                "type": "TemplateLiteral",
+                "quasis": [
+                  {
+                    "type": "TemplateElement",
+                    "value": {
+                      "raw": "\n0% {\n  opacity: 0;\n  margin-top: -25px;\n}\n100% {\n  opacity: 1;\n  margin-top: 0;\n}\n",
+                      "cooked": "\n0% {\n  opacity: 0;\n  margin-top: -25px;\n}\n100% {\n  opacity: 1;\n  margin-top: 0;\n}\n"
+                    },
+                    "tail": true,
+                    "range": [
+                      163,
+                      248
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 12,
+                        "column": 34
+                      },
+                      "end": {
+                        "line": 21,
+                        "column": 1
+                      }
+                    }
+                  }
+                ],
+                "expressions": [],
+                "range": [
+                  163,
+                  248
+                ],
+                "loc": {
+                  "start": {
+                    "line": 12,
+                    "column": 34
+                  },
+                  "end": {
+                    "line": 21,
+                    "column": 1
+                  }
+                }
+              },
+              "range": [
+                154,
+                248
+              ],
+              "loc": {
+                "start": {
+                  "line": 12,
+                  "column": 25
+                },
+                "end": {
+                  "line": 21,
+                  "column": 1
+                }
+              }
+            },
+            "range": [
+              142,
+              248
+            ],
+            "loc": {
+              "start": {
+                "line": 12,
+                "column": 13
+              },
+              "end": {
+                "line": 21,
+                "column": 1
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          136,
+          249
+        ],
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 7
+          },
+          "end": {
+            "line": 21,
+            "column": 2
+          }
+        },
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        129,
+        249
+      ],
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 0
+        },
+        "end": {
+          "line": 21,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "fadeInBottom",
+              "range": [
+                264,
+                276
+              ],
+              "loc": {
+                "start": {
+                  "line": 23,
+                  "column": 13
+                },
+                "end": {
+                  "line": 23,
+                  "column": 25
+                }
+              }
+            },
+            "init": {
+              "type": "TaggedTemplateExpression",
+              "tag": {
+                "type": "Identifier",
+                "name": "keyframes",
+                "range": [
+                  279,
+                  288
+                ],
+                "loc": {
+                  "start": {
+                    "line": 23,
+                    "column": 28
+                  },
+                  "end": {
+                    "line": 23,
+                    "column": 37
+                  }
+                }
+              },
+              "quasi": {
+                "type": "TemplateLiteral",
+                "quasis": [
+                  {
+                    "type": "TemplateElement",
+                    "value": {
+                      "raw": "\n0% {\n  opacity: 0;\n  margin-bottom: -25px;\n}\n100% {\n  opacity: 1;\n  margin-bottom: 0;\n}\n",
+                      "cooked": "\n0% {\n  opacity: 0;\n  margin-bottom: -25px;\n}\n100% {\n  opacity: 1;\n  margin-bottom: 0;\n}\n"
+                    },
+                    "tail": true,
+                    "range": [
+                      288,
+                      379
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 23,
+                        "column": 37
+                      },
+                      "end": {
+                        "line": 32,
+                        "column": 1
+                      }
+                    }
+                  }
+                ],
+                "expressions": [],
+                "range": [
+                  288,
+                  379
+                ],
+                "loc": {
+                  "start": {
+                    "line": 23,
+                    "column": 37
+                  },
+                  "end": {
+                    "line": 32,
+                    "column": 1
+                  }
+                }
+              },
+              "range": [
+                279,
+                379
+              ],
+              "loc": {
+                "start": {
+                  "line": 23,
+                  "column": 28
+                },
+                "end": {
+                  "line": 32,
+                  "column": 1
+                }
+              }
+            },
+            "range": [
+              264,
+              379
+            ],
+            "loc": {
+              "start": {
+                "line": 23,
+                "column": 13
+              },
+              "end": {
+                "line": 32,
+                "column": 1
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          258,
+          380
+        ],
+        "loc": {
+          "start": {
+            "line": 23,
+            "column": 7
+          },
+          "end": {
+            "line": 32,
+            "column": 2
+          }
+        },
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        251,
+        380
+      ],
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 0
+        },
+        "end": {
+          "line": 32,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "fadeInLeft",
+              "range": [
+                395,
+                405
+              ],
+              "loc": {
+                "start": {
+                  "line": 34,
+                  "column": 13
+                },
+                "end": {
+                  "line": 34,
+                  "column": 23
+                }
+              }
+            },
+            "init": {
+              "type": "TaggedTemplateExpression",
+              "tag": {
+                "type": "Identifier",
+                "name": "keyframes",
+                "range": [
+                  408,
+                  417
+                ],
+                "loc": {
+                  "start": {
+                    "line": 34,
+                    "column": 26
+                  },
+                  "end": {
+                    "line": 34,
+                    "column": 35
+                  }
+                }
+              },
+              "quasi": {
+                "type": "TemplateLiteral",
+                "quasis": [
+                  {
+                    "type": "TemplateElement",
+                    "value": {
+                      "raw": "\n0% {\n  opacity: 0;\n  margin-left: -25px;\n}\n100% {\n  opacity: 1;\n  margin-left: 0;\n}\n",
+                      "cooked": "\n0% {\n  opacity: 0;\n  margin-left: -25px;\n}\n100% {\n  opacity: 1;\n  margin-left: 0;\n}\n"
+                    },
+                    "tail": true,
+                    "range": [
+                      417,
+                      504
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 34,
+                        "column": 35
+                      },
+                      "end": {
+                        "line": 43,
+                        "column": 1
+                      }
+                    }
+                  }
+                ],
+                "expressions": [],
+                "range": [
+                  417,
+                  504
+                ],
+                "loc": {
+                  "start": {
+                    "line": 34,
+                    "column": 35
+                  },
+                  "end": {
+                    "line": 43,
+                    "column": 1
+                  }
+                }
+              },
+              "range": [
+                408,
+                504
+              ],
+              "loc": {
+                "start": {
+                  "line": 34,
+                  "column": 26
+                },
+                "end": {
+                  "line": 43,
+                  "column": 1
+                }
+              }
+            },
+            "range": [
+              395,
+              504
+            ],
+            "loc": {
+              "start": {
+                "line": 34,
+                "column": 13
+              },
+              "end": {
+                "line": 43,
+                "column": 1
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          389,
+          505
+        ],
+        "loc": {
+          "start": {
+            "line": 34,
+            "column": 7
+          },
+          "end": {
+            "line": 43,
+            "column": 2
+          }
+        },
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        382,
+        505
+      ],
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 0
+        },
+        "end": {
+          "line": 43,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "fadeInRight",
+              "range": [
+                520,
+                531
+              ],
+              "loc": {
+                "start": {
+                  "line": 45,
+                  "column": 13
+                },
+                "end": {
+                  "line": 45,
+                  "column": 24
+                }
+              }
+            },
+            "init": {
+              "type": "TaggedTemplateExpression",
+              "tag": {
+                "type": "Identifier",
+                "name": "keyframes",
+                "range": [
+                  534,
+                  543
+                ],
+                "loc": {
+                  "start": {
+                    "line": 45,
+                    "column": 27
+                  },
+                  "end": {
+                    "line": 45,
+                    "column": 36
+                  }
+                }
+              },
+              "quasi": {
+                "type": "TemplateLiteral",
+                "quasis": [
+                  {
+                    "type": "TemplateElement",
+                    "value": {
+                      "raw": "\n0% {\n  opacity: 0;\n  margin-right: -25px;\n}\n100% {\n  opacity: 1;\n  margin-right: 0;\n}\n",
+                      "cooked": "\n0% {\n  opacity: 0;\n  margin-right: -25px;\n}\n100% {\n  opacity: 1;\n  margin-right: 0;\n}\n"
+                    },
+                    "tail": true,
+                    "range": [
+                      543,
+                      632
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 45,
+                        "column": 36
+                      },
+                      "end": {
+                        "line": 54,
+                        "column": 1
+                      }
+                    }
+                  }
+                ],
+                "expressions": [],
+                "range": [
+                  543,
+                  632
+                ],
+                "loc": {
+                  "start": {
+                    "line": 45,
+                    "column": 36
+                  },
+                  "end": {
+                    "line": 54,
+                    "column": 1
+                  }
+                }
+              },
+              "range": [
+                534,
+                632
+              ],
+              "loc": {
+                "start": {
+                  "line": 45,
+                  "column": 27
+                },
+                "end": {
+                  "line": 54,
+                  "column": 1
+                }
+              }
+            },
+            "range": [
+              520,
+              632
+            ],
+            "loc": {
+              "start": {
+                "line": 45,
+                "column": 13
+              },
+              "end": {
+                "line": 54,
+                "column": 1
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          514,
+          633
+        ],
+        "loc": {
+          "start": {
+            "line": 45,
+            "column": 7
+          },
+          "end": {
+            "line": 54,
+            "column": 2
+          }
+        },
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        507,
+        633
+      ],
+      "loc": {
+        "start": {
+          "line": 45,
+          "column": 0
+        },
+        "end": {
+          "line": 54,
+          "column": 2
+        }
+      }
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    0,
+    633
+  ],
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 54,
+      "column": 2
+    }
+  },
+  "comments": []
+}
