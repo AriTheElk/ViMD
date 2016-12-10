@@ -1,0 +1,563 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "styled",
+            "range": [
+              7,
+              13
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 7
+              },
+              "end": {
+                "line": 1,
+                "column": 13
+              }
+            }
+          },
+          "range": [
+            7,
+            13
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 7
+            },
+            "end": {
+              "line": 1,
+              "column": 13
+            }
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "keyframes",
+            "range": [
+              17,
+              26
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 17
+              },
+              "end": {
+                "line": 1,
+                "column": 26
+              }
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "keyframes",
+            "range": [
+              17,
+              26
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 17
+              },
+              "end": {
+                "line": 1,
+                "column": 26
+              }
+            }
+          },
+          "range": [
+            17,
+            26
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 17
+            },
+            "end": {
+              "line": 1,
+              "column": 26
+            }
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "styled-components",
+        "raw": "'styled-components'",
+        "range": [
+          34,
+          53
+        ],
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 34
+          },
+          "end": {
+            "line": 1,
+            "column": 53
+          }
+        }
+      },
+      "range": [
+        0,
+        54
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 54
+        }
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "ButtonGroup",
+            "range": [
+              63,
+              74
+            ],
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 7
+              },
+              "end": {
+                "line": 3,
+                "column": 18
+              }
+            }
+          },
+          "range": [
+            63,
+            74
+          ],
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 7
+            },
+            "end": {
+              "line": 3,
+              "column": 18
+            }
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "../ButtonGroup",
+        "raw": "'../ButtonGroup'",
+        "range": [
+          80,
+          96
+        ],
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 24
+          },
+          "end": {
+            "line": 3,
+            "column": 40
+          }
+        }
+      },
+      "range": [
+        56,
+        97
+      ],
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 41
+        }
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "fadeInTop",
+            "range": [
+              107,
+              116
+            ],
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 9
+              },
+              "end": {
+                "line": 4,
+                "column": 18
+              }
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "fadeInTop",
+            "range": [
+              107,
+              116
+            ],
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 9
+              },
+              "end": {
+                "line": 4,
+                "column": 18
+              }
+            }
+          },
+          "range": [
+            107,
+            116
+          ],
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 9
+            },
+            "end": {
+              "line": 4,
+              "column": 18
+            }
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "../../styles/animations",
+        "raw": "'../../styles/animations'",
+        "range": [
+          124,
+          149
+        ],
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 26
+          },
+          "end": {
+            "line": 4,
+            "column": 51
+          }
+        }
+      },
+      "range": [
+        98,
+        150
+      ],
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 52
+        }
+      },
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Add a fadeInTop animation to our navigation links\n ",
+          "range": [
+            152,
+            212
+          ],
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 0
+            },
+            "end": {
+              "line": 8,
+              "column": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExportDefaultDeclaration",
+      "declaration": {
+        "type": "TaggedTemplateExpression",
+        "tag": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "styled",
+            "range": [
+              228,
+              234
+            ],
+            "loc": {
+              "start": {
+                "line": 9,
+                "column": 15
+              },
+              "end": {
+                "line": 9,
+                "column": 21
+              }
+            }
+          },
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "ButtonGroup",
+              "range": [
+                235,
+                246
+              ],
+              "loc": {
+                "start": {
+                  "line": 9,
+                  "column": 22
+                },
+                "end": {
+                  "line": 9,
+                  "column": 33
+                }
+              }
+            }
+          ],
+          "range": [
+            228,
+            247
+          ],
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 15
+            },
+            "end": {
+              "line": 9,
+              "column": 34
+            }
+          }
+        },
+        "quasi": {
+          "type": "TemplateLiteral",
+          "quasis": [
+            {
+              "type": "TemplateElement",
+              "value": {
+                "raw": "\n  animation: ",
+                "cooked": "\n  animation: "
+              },
+              "tail": false,
+              "range": [
+                247,
+                264
+              ],
+              "loc": {
+                "start": {
+                  "line": 9,
+                  "column": 34
+                },
+                "end": {
+                  "line": 10,
+                  "column": 15
+                }
+              }
+            },
+            {
+              "type": "TemplateElement",
+              "value": {
+                "raw": " .6s normal forwards;\n  animation-timing-function: ease-out;\n  animation-delay: 2s;\n  opacity: 0;\n",
+                "cooked": " .6s normal forwards;\n  animation-timing-function: ease-out;\n  animation-delay: 2s;\n  opacity: 0;\n"
+              },
+              "tail": true,
+              "range": [
+                275,
+                375
+              ],
+              "loc": {
+                "start": {
+                  "line": 10,
+                  "column": 26
+                },
+                "end": {
+                  "line": 14,
+                  "column": 1
+                }
+              }
+            }
+          ],
+          "expressions": [
+            {
+              "type": "Identifier",
+              "name": "fadeInTop",
+              "range": [
+                265,
+                274
+              ],
+              "loc": {
+                "start": {
+                  "line": 10,
+                  "column": 16
+                },
+                "end": {
+                  "line": 10,
+                  "column": 25
+                }
+              }
+            }
+          ],
+          "range": [
+            247,
+            375
+          ],
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 34
+            },
+            "end": {
+              "line": 14,
+              "column": 1
+            }
+          }
+        },
+        "range": [
+          228,
+          375
+        ],
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 15
+          },
+          "end": {
+            "line": 14,
+            "column": 1
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Add a fadeInTop animation to our navigation links\n ",
+            "range": [
+              152,
+              212
+            ],
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 0
+              },
+              "end": {
+                "line": 8,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": []
+      },
+      "range": [
+        213,
+        376
+      ],
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 0
+        },
+        "end": {
+          "line": 14,
+          "column": 2
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Add a fadeInTop animation to our navigation links\n ",
+          "range": [
+            152,
+            212
+          ],
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 0
+            },
+            "end": {
+              "line": 8,
+              "column": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    0,
+    376
+  ],
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 14,
+      "column": 2
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * Add a fadeInTop animation to our navigation links\n ",
+      "range": [
+        152,
+        212
+      ],
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 3
+        }
+      }
+    }
+  ]
+}

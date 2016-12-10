@@ -1,0 +1,300 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "Dropzone",
+            "range": [
+              7,
+              15
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 7
+              },
+              "end": {
+                "line": 1,
+                "column": 15
+              }
+            }
+          },
+          "range": [
+            7,
+            15
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 7
+            },
+            "end": {
+              "line": 1,
+              "column": 15
+            }
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "react-dropzone",
+        "raw": "'react-dropzone'",
+        "range": [
+          21,
+          37
+        ],
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 21
+          },
+          "end": {
+            "line": 1,
+            "column": 37
+          }
+        }
+      },
+      "range": [
+        0,
+        38
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 38
+        }
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "styled",
+            "range": [
+              46,
+              52
+            ],
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 7
+              },
+              "end": {
+                "line": 2,
+                "column": 13
+              }
+            }
+          },
+          "range": [
+            46,
+            52
+          ],
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 7
+            },
+            "end": {
+              "line": 2,
+              "column": 13
+            }
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "styled-components",
+        "raw": "'styled-components'",
+        "range": [
+          58,
+          77
+        ],
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 19
+          },
+          "end": {
+            "line": 2,
+            "column": 38
+          }
+        }
+      },
+      "range": [
+        39,
+        78
+      ],
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": "ExportDefaultDeclaration",
+      "declaration": {
+        "type": "TaggedTemplateExpression",
+        "tag": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "styled",
+            "range": [
+              95,
+              101
+            ],
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 15
+              },
+              "end": {
+                "line": 4,
+                "column": 21
+              }
+            }
+          },
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "Dropzone",
+              "range": [
+                102,
+                110
+              ],
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 22
+                },
+                "end": {
+                  "line": 4,
+                  "column": 30
+                }
+              }
+            }
+          ],
+          "range": [
+            95,
+            111
+          ],
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 15
+            },
+            "end": {
+              "line": 4,
+              "column": 31
+            }
+          }
+        },
+        "quasi": {
+          "type": "TemplateLiteral",
+          "quasis": [
+            {
+              "type": "TemplateElement",
+              "value": {
+                "raw": "\n  opacity: 1;\n  &.active {\n    opacity: .6;\n  }\n",
+                "cooked": "\n  opacity: 1;\n  &.active {\n    opacity: .6;\n  }\n"
+              },
+              "tail": true,
+              "range": [
+                111,
+                162
+              ],
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 31
+                },
+                "end": {
+                  "line": 9,
+                  "column": 1
+                }
+              }
+            }
+          ],
+          "expressions": [],
+          "range": [
+            111,
+            162
+          ],
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 31
+            },
+            "end": {
+              "line": 9,
+              "column": 1
+            }
+          }
+        },
+        "range": [
+          95,
+          162
+        ],
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 15
+          },
+          "end": {
+            "line": 9,
+            "column": 1
+          }
+        },
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      "range": [
+        80,
+        163
+      ],
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 9,
+          "column": 2
+        }
+      }
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    0,
+    163
+  ],
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 9,
+      "column": 2
+    }
+  },
+  "comments": []
+}

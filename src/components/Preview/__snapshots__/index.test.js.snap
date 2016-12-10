@@ -1,0 +1,10 @@
+exports[`test renders empty preview component 1`] = `
+<div
+  className="iFMdVb jAVKpJ" />
+`;
+
+exports[`test renders preview component with content 1`] = `
+<div
+  className="iFMdVb jAVKpJ"
+  markdown="hello world!" />
+`;
