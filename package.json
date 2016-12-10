@@ -81,7 +81,7 @@
     "docs": "esdoc -c esdoc.json",
     "lint": "eslint src/",
     "start": "node scripts/start.js",
-    "test": "jest"
+    "test": "npm run lint && jest"
   },
   "jest": {
     "verbose": true,
