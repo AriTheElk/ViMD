@@ -990,7 +990,7 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import { keyframes } from 'styled-components';\n\nexport const fadeIn = keyframes`\n0% {\n  opacity: 0;\n}\n100% {\n  opacity: 1;\n}\n`;\n\nexport const fadeInTop = keyframes`\n0% {\n  opacity: 0;\n  margin-top: -25px;\n}\n100% {\n  opacity: 1;\n  margin-top: 0;\n}\n`;\n\nexport const fadeInBottom = keyframes`\n0% {\n  opacity: 0;\n  margin-bottom: -25px;\n}\n100% {\n  opacity: 1;\n  margin-bottom: 0;\n}\n`;\n\nexport const fadeInLeft = keyframes`\n0% {\n  opacity: 0;\n  margin-left: -25px;\n}\n100% {\n  opacity: 1;\n  margin-left: 0;\n}\n`;\n\nexport const fadeInRight = keyframes`\n0% {\n  opacity: 0;\n  margin-right: -25px;\n}\n100% {\n  opacity: 1;\n  margin-right: 0;\n}\n`;\n"
+    "content": "import { keyframes } from 'styled-components';\n\n/**\n * CSS animation for fading in without moving\n */\nexport const fadeIn = keyframes`\n0% {\n  opacity: 0;\n}\n100% {\n  opacity: 1;\n}\n`;\n\n/**\n * CSS animation for fading in from the top\n */\nexport const fadeInTop = keyframes`\n0% {\n  opacity: 0;\n  margin-top: -25px;\n}\n100% {\n  opacity: 1;\n  margin-top: 0;\n}\n`;\n\n/**\n * CSS animation for fading in from the bottom\n */\nexport const fadeInBottom = keyframes`\n0% {\n  opacity: 0;\n  margin-bottom: -25px;\n}\n100% {\n  opacity: 1;\n  margin-bottom: 0;\n}\n`;\n\n/**\n * CSS animation for fading in from the left\n */\nexport const fadeInLeft = keyframes`\n0% {\n  opacity: 0;\n  margin-left: -25px;\n}\n100% {\n  opacity: 1;\n  margin-left: 0;\n}\n`;\n\n/**\n * CSS animation for fading in from the right\n */\nexport const fadeInRight = keyframes`\n0% {\n  opacity: 0;\n  margin-right: -25px;\n}\n100% {\n  opacity: 1;\n  margin-right: 0;\n}\n`;\n"
   },
   {
     "__docId__": 55,
@@ -1004,9 +1004,8 @@
     "export": true,
     "importPath": "vimd/src/styles/animations.js",
     "importStyle": "{fadeIn}",
-    "description": null,
-    "lineNumber": 3,
-    "undocument": true,
+    "description": "CSS animation for fading in without moving",
+    "lineNumber": 6,
     "type": {
       "types": [
         "*"
@@ -1025,9 +1024,8 @@
     "export": true,
     "importPath": "vimd/src/styles/animations.js",
     "importStyle": "{fadeInTop}",
-    "description": null,
-    "lineNumber": 12,
-    "undocument": true,
+    "description": "CSS animation for fading in from the top",
+    "lineNumber": 18,
     "type": {
       "types": [
         "*"
@@ -1046,9 +1044,8 @@
     "export": true,
     "importPath": "vimd/src/styles/animations.js",
     "importStyle": "{fadeInBottom}",
-    "description": null,
-    "lineNumber": 23,
-    "undocument": true,
+    "description": "CSS animation for fading in from the bottom",
+    "lineNumber": 32,
     "type": {
       "types": [
         "*"
@@ -1067,9 +1064,8 @@
     "export": true,
     "importPath": "vimd/src/styles/animations.js",
     "importStyle": "{fadeInLeft}",
-    "description": null,
-    "lineNumber": 34,
-    "undocument": true,
+    "description": "CSS animation for fading in from the left",
+    "lineNumber": 46,
     "type": {
       "types": [
         "*"
@@ -1088,9 +1084,8 @@
     "export": true,
     "importPath": "vimd/src/styles/animations.js",
     "importStyle": "{fadeInRight}",
-    "description": null,
-    "lineNumber": 45,
-    "undocument": true,
+    "description": "CSS animation for fading in from the right",
+    "lineNumber": 60,
     "type": {
       "types": [
         "*"

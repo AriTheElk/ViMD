@@ -1,7 +1,7 @@
 {
-  "coverage": "39.13%",
+  "coverage": "60.86%",
   "expectCount": 23,
-  "actualCount": 9,
+  "actualCount": 14,
   "files": {
     "src/containers/AppPage/index.js": {
       "expectCount": 6,
@@ -63,14 +63,8 @@
     },
     "src/styles/animations.js": {
       "expectCount": 5,
-      "actualCount": 0,
-      "undocumentLines": [
-        3,
-        23,
-        34,
-        45,
-        12
-      ]
+      "actualCount": 5,
+      "undocumentLines": []
     },
     "src/utils/process.js": {
       "expectCount": 1,
