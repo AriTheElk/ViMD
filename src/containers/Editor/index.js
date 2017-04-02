@@ -3,7 +3,7 @@ import AceEditor from 'react-ace';
 import base64 from 'base-64';
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
-import { Row, Column } from 'hedron';
+import { Container, Box } from 'hedron';
 
 // import our site's theme
 import Dropzone from './Dropzone';
@@ -20,6 +20,9 @@ const theme = require(`../../styles/themes/${config.theme}`).default;
  * @extends {PureComponent}
  */
 export default class Editor extends PureComponent {
+  constructor(props) {
+    super(props);
+  }
   componentWillMount() {
     // bind(this) allows `this` to be used from within the onDrop() function
     this.onDrop = this.onDrop.bind(this);
@@ -55,8 +58,8 @@ export default class Editor extends PureComponent {
     };
     return (
       <Dropzone onDrop={this.onDrop} disableClick activeClassName='active'>
-        <Row>
-          <Column fluid xs={6}>
+        <Container>
+          <Box fluid xs='50%'>
             <AceEditor
               mode='markdown'
               theme={theme.editor.theme}
@@ -71,9 +74,9 @@ export default class Editor extends PureComponent {
               setOptions={options}
               wrapEnabled
             />
-          </Column>
-          <Preview xs={6} dangerouslySetInnerHTML={{ __html: processMarkdown(this.props.code) }} />
-        </Row>
+          </Box>
+          <Preview xs='50%' dangerouslySetInnerHTML={{ __html: processMarkdown(this.props.code) }} />
+        </Container>
       </Dropzone>
     );
   }

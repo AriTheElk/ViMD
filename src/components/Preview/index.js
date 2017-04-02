@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { Column } from 'hedron';
+import { Box } from 'hedron';
 import { fadeIn } from '../../styles/animations';
 
-export default styled(Column)`
+export default styled(Box)`
   animation-delay: .25s;
   animation-timing-function: ease-out;
   animation: ${fadeIn} 2s normal forwards;
