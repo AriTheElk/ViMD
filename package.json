@@ -63,7 +63,7 @@
     "base-64": "^0.1.0",
     "brace": "^0.9.0",
     "dateformat": "^2.0.0",
-    "hedron": "next",
+    "hedron": "1.0.0-beta.2",
     "in-browser-download": "^1.0.0",
     "lodash": "^4.17.2",
     "markdown-loader": "^0.1.7",

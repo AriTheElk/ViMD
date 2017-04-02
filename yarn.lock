@@ -2562,9 +2562,9 @@ he@1.1.x:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.1.0.tgz#29319d49beec13a9b1f3c4f9b2a6dde4859bb2a7"
 
-hedron@next:
-  version "1.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/hedron/-/hedron-1.0.0-beta.0.tgz#7b1cf2f6dd2b98940e5b1cac16cd7a322f0564d2"
+hedron@1.0.0-beta.2:
+  version "1.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/hedron/-/hedron-1.0.0-beta.2.tgz#c217381701051d72f03c6b320c0455cda97f1f2c"
   dependencies:
     styled-components "^1.0.10"
 
