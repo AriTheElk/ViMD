@@ -1,8 +1,9 @@
 exports[`test renders header component 1`] = `
-<section
-  className="kjaKCP fNeyiY">
+<div
+  className="jJRUPB kttdzK"
+  direction="horizontal">
   <div
-    className="fhsyOZ lofIZj">
+    className="fhsyOZ eRrCQv">
     <h1
       className="lgWtJu">
       Vi
@@ -12,7 +13,7 @@ exports[`test renders header component 1`] = `
     </h1>
   </div>
   <div
-    className="fhsyOZ lofIZj">
+    className="fhsyOZ iYWubl">
     <ul
       className="iHoPSa lbAbHF">
       <li
@@ -47,5 +48,5 @@ exports[`test renders header component 1`] = `
       </li>
     </ul>
   </div>
-</section>
+</div>
 `;
