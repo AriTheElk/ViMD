@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 import styled from 'styled-components';
-import { Row, Column } from 'hedron';
+import { Box } from 'hedron';
 
 import Brand from './Brand';
 import Button from './Button';
@@ -10,7 +10,7 @@ import Icon from '../Icon';
 import Wrapper from './Wrapper';
 import type { HeaderProps } from './types';
 
-const Col = styled(Column)`
+const Col = styled(Box)`
   padding: 3px;
 `;
 
@@ -30,10 +30,10 @@ export default function Header(props: HeaderProps) {
   ];
   return (
     <Wrapper>
-      <Col xs={6}>
+      <Col>
         <Brand>Vi<b>MD</b></Brand>
       </Col>
-      <Col xs={6}>
+      <Col noFlex xsShift='auto'>
         <Navigation buttons={buttons}/>
       </Col>
     </Wrapper>

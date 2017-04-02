@@ -3,7 +3,7 @@ import base64 from 'base-64';
 import Dropzone from 'react-dropzone';
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
-import { Page, Row, Column } from 'hedron';
+import { Section } from 'hedron';
 
 import config from '../../config';
 import Editor from '../Editor';
@@ -74,10 +74,10 @@ export default class AppPage extends PureComponent {
 
   render() {
     return (
-      <Page fluid>
+      <Section fluid>
         <Header onSave={this.download}/>
         <Editor onChange={this.editorChanged} code={this.state.markdown} />
-      </Page>
+      </Section>
     );
   }
 }
