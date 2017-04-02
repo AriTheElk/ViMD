@@ -1,3 +1,3 @@
 export default {
-    theme: 'cobalt',
+    theme: 'tomorrow_night',
 };
