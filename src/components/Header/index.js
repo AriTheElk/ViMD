@@ -10,10 +10,6 @@ import Icon from '../Icon';
 import Wrapper from './Wrapper';
 import type { HeaderProps } from './types';
 
-const Col = styled(Box)`
-  padding: 3px;
-`;
-
 /**
  * The `Header` component is responsible for rendering the top bar
  * with the brand name and menu navigation. The background color
@@ -30,12 +26,12 @@ export default function Header(props: HeaderProps) {
   ];
   return (
     <Wrapper>
-      <Col>
+      <Box fluid>
         <Brand>Vi<b>MD</b></Brand>
-      </Col>
-      <Col noFlex xsShift='auto'>
+      </Box>
+      <Box noFlex xsShift='auto' fluid>
         <Navigation buttons={buttons}/>
-      </Col>
+      </Box>
     </Wrapper>
   );
 }

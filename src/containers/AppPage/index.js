@@ -3,7 +3,7 @@ import base64 from 'base-64';
 import Dropzone from 'react-dropzone';
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
-import { Section } from 'hedron';
+import { LayoutProvider, Section, Container, Box } from 'hedron';
 
 import config from '../../config';
 import Editor from '../Editor';
@@ -25,7 +25,7 @@ import 'brace/keybinding/vim';
 // TODO: resolve the below 'module not found' flow error
 const ReadMe = require('../../translations/README/en.md');
 const parts = ReadMe.split(',');
-const Docs = base64.decode(parts[parts.length-1]);
+const Docs = base64.decode(parts[parts.length - 1]);
 
 /**
  * This is the main component for the application.
@@ -74,10 +74,14 @@ export default class AppPage extends PureComponent {
 
   render() {
     return (
-      <Section fluid>
-        <Header onSave={this.download}/>
-        <Editor onChange={this.editorChanged} code={this.state.markdown} />
-      </Section>
+      <LayoutProvider>
+        <Section fluid>
+          <Container direction='vertical'>
+            <Box fluid><Header onSave={this.download} /></Box>
+            <Box fluid><Editor onChange={this.editorChanged} code={this.state.markdown} /></Box>
+          </Container>
+        </Section>
+      </LayoutProvider>
     );
   }
 }
