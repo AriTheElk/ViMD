@@ -26,14 +26,10 @@
     "node": true
   },
   "settings": {
-    "import/ignore": [
-      "node_modules"
-    ]
   },
   "rules": {
     "comma-dangle": ["error", "always-multiline"],
     "eol-last": ["error", "always"],
-    "import/extensions": 1,
     "jsx-quotes": ["error", "prefer-single"],
     "no-alert": 0,
     "no-console": 1,
