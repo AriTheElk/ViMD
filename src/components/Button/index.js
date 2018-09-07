@@ -9,7 +9,6 @@ const Button = styled.button`
   cursor: pointer;
   font-size: 14px;
   font-style: italic;
-  font-weight: 100;
   padding: 8px 12px;
   &:disabled {
     cursor: not-allowed;
