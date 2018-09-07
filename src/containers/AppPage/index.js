@@ -7,22 +7,10 @@ import Editor from "../Editor";
 import Header from "../../components/Header";
 import { downloadMarkdown } from "../../utils";
 
-// import the required dependencies for our [br]ace editor.
-import "brace/mode/markdown";
-import "brace/keybinding/vim";
-
 // TODO: resolve the below 'module not found' flow error
-import README from "../../translations/README/en.md";
+
 // const parts = ReadMe.split(",");
 // const Docs = base64.decode(parts[parts.length - 1]);
-
-// import the site's theme parameters
-const theme = require("../../styles/themes/cobalt").default;
-
-// unfortunately the import statement doesn't allow variables
-// to be used with it. So we need to use `require` to import
-// the dynamically-set ace editor theme.
-require(`brace/theme/${theme.editor.theme}`);
 
 /**
  * This is the main component for the application.
@@ -41,7 +29,13 @@ export default class AppPage extends PureComponent {
     // bind(this) allows `this` to be used from within our functions
     this.download = this.download.bind(this);
     this.editorChanged = this.editorChanged.bind(this);
+  }
 
+  componentDidMount() {
+    // TODO: Find a better way to import the markdown file
+    // This is done because when using SSR, express doesn't
+    // understand how to import markdown files.
+    const README = require("../../translations/README/en.md");
     fetch(README)
       .then(response => response.text())
       .then(markdown => {
