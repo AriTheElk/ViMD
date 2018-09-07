@@ -10,12 +10,12 @@ import Preview from "../../components/Preview";
 import config from "../../config";
 import { processMarkdown, downloadMarkdown } from "../../utils";
 
-// import the site's theme parameters
-const theme = require("../../styles/themes/cobalt").default;
-
 // import the required dependencies for our [br]ace editor.
 import "brace/mode/markdown";
 import "brace/keybinding/vim";
+
+// import the site's theme parameters
+const theme = require("../../styles/themes/cobalt").default;
 
 // unfortunately the import statement doesn't allow variables
 // to be used with it. So we need to use `require` to import
