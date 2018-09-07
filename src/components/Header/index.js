@@ -30,7 +30,7 @@ export default function Header(props) {
   ];
   return (
     <Wrapper padding="10px" valign="center">
-      <Grid.Bounds width="50%">
+      <Grid.Bounds valign="center" width="50%">
         <Grid.Box fluid>
           <Brand>
             Vi
