@@ -1,16 +1,12 @@
-import _ from "lodash";
 import base from "./base";
 
 /**
  * Twilight Theme
  */
 const twilight = {
-  header: {
-    background: "#1D1F21",
-  },
-  editor: {
-    theme: "twilight",
-  },
+  ...base,
+  header_background: "#1D1F21",
+  editor_theme: "twilight",
 };
 
-export default _.merge({}, base, twilight);
+export default twilight;
