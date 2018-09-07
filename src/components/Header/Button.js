@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import Button from '../Button';
+import Button from "../Button";
 
 /**
  * Override the `Button` component with header specific styles
- * 
+ *
  * TODO: make the underline animate to the opposite side on mouseOut
  */
 export default styled(Button)`
@@ -16,10 +16,10 @@ export default styled(Button)`
     background: #fff;
     bottom: 0;
     color: transparent;
-    content: ' ';
+    content: " ";
     height: 2px;
     position: absolute;
-    transition: all .2s ease-in-out;
+    transition: all 0.15s ease-in-out;
     width: 0;
   }
   &:hover {
