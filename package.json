@@ -32,7 +32,6 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "gh-pages": "^1.2.0",
     "react-test-renderer": "^16.5.0"
   }
 }
