@@ -26,9 +26,11 @@ class Editor extends PureComponent {
   componentWillMount() {
     // bind(this) allows `this` to be used from within the onDrop() function
     this.onDrop = this.onDrop.bind(this);
-
-    require(`brace/theme/${this.props.theme.editor_theme}`);
   }
+
+  setTheme = theme => {
+    require(`brace/theme/${theme}`);
+  };
 
   /**
    * This gets triggered the user drops a file in the window.

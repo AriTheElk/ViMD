@@ -1,12 +1,12 @@
 import base from "./base";
 
 /**
- * Twilight Theme
+ * Gruvbox Theme
  */
-const twilight = {
+const gruvbox = {
   ...base,
   header_background: "#1D2021",
   editor_theme: "gruvbox",
 };
 
-export default twilight;
+export default gruvbox;

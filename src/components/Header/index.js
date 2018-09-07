@@ -4,6 +4,7 @@ import Grid from "hedron";
 import Brand from "./Brand";
 import Button from "./Button";
 import Navigation from "./Navigation";
+import Dropdown from "./Dropdown";
 import Link from "../Icon/Link";
 import Wrapper from "./Wrapper";
 
@@ -29,12 +30,21 @@ export default function Header(props) {
   ];
   return (
     <Wrapper padding="10px" valign="center">
-      <Grid.Box fluid>
-        <Brand>
-          Vi
-          <b>MD</b>
-        </Brand>
-      </Grid.Box>
+      <Grid.Bounds width="50%">
+        <Grid.Box fluid>
+          <Brand>
+            Vi
+            <b>MD</b>
+          </Brand>
+        </Grid.Box>
+        <Grid.Box fluid shiftRight>
+          <Dropdown
+            options={props.themes}
+            value={props.activeTheme}
+            onChange={props.onThemeChange}
+          />
+        </Grid.Box>
+      </Grid.Bounds>
       <Grid.Box shiftRight fluid>
         <Navigation buttons={buttons} />
       </Grid.Box>
