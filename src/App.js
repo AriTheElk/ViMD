@@ -1,9 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React, { PureComponent } from "react";
 import { ThemeProvider } from "styled-components";
+import Grid from "hedron";
 
-// import our App component
-import AppPage from "./containers/AppPage";
+import Editor from "./containers/Editor";
+import Header from "./components/Header";
+import { downloadMarkdown } from "./utils";
+
 // import our global styles
 import GlobalStyle from "./styles/global";
 
@@ -11,21 +13,99 @@ import GlobalStyle from "./styles/global";
 // TODO: Allow users to change the theme
 // The theme in the config should be the default fallback
 const config = require("./config").default;
-const theme = require(`./styles/themes/${config.theme}`).default;
 
 /**
- * This is the top level render function
+ * This is the main component for the application.
  *
- * Our initial page is the `AppPage`. It's wrapped inside
- * a `ThemeProvider` so that all the children styled using
- * `styled-components` will automatically be able to inherit
- * from the current site theme.
+ * @class App
+ * @extends {PureComponent}
  */
-export default () => (
-  <ThemeProvider theme={theme}>
-    <div>
-      <GlobalStyle />
-      <AppPage />
-    </div>
-  </ThemeProvider>
-);
+export default class App extends PureComponent {
+  // this gets run once, when the component initially mounts.
+  componentWillMount() {
+    // set the initial state
+    this.state = {
+      // write some sample markdown to our state
+      markdown: "",
+      theme: config.default_theme,
+      // TODO: implement a less ugly method to handle this require
+      theme_data: require(`./styles/themes/${config.default_theme}`).default,
+    };
+
+    // bind(this) allows `this` to be used from within our functions
+    this.download = this.download.bind(this);
+    this.editorChanged = this.editorChanged.bind(this);
+
+    // Initialize all the themes
+    // TODO: figure out how to avoid loading themes until they're changed
+    config.themes.forEach(theme => require(`brace/theme/${theme.value}`));
+  }
+
+  componentDidMount() {
+    // TODO: Find a better way to import the markdown file
+    // This is done because when using SSR, express doesn't
+    // understand how to import markdown files.
+    const README = require("./translations/README/en.md");
+    fetch(README)
+      .then(response => response.text())
+      .then(markdown => {
+        this.setState({ markdown });
+      });
+  }
+
+  changeActiveTheme = theme => {
+    console.log("changing theme to", theme);
+    this.setState({
+      theme: theme.value,
+      theme_data: require(`./styles/themes/${theme.value}`).default,
+    });
+  };
+
+  /**
+   * This gets triggered the user pressed the save button.
+   *
+   * @memberOf App
+   */
+  download() {
+    return downloadMarkdown(this.state.markdown);
+  }
+
+  /**
+   * Callback for the editor's `onChange` action.
+   *
+   * @param {string} newVal
+   *
+   * @memberOf App
+   */
+  editorChanged(newVal) {
+    this.setState({ markdown: newVal });
+  }
+
+  render() {
+    return (
+      <ThemeProvider theme={this.state.theme_data}>
+        <Grid.Provider>
+          <Grid.Bounds fluid>
+            <GlobalStyle />
+            <Grid.Bounds direction="vertical" fill>
+              <Grid.Box fluid>
+                <Header
+                  onSave={this.download}
+                  themes={config.themes}
+                  activeTheme={this.state.theme}
+                  onThemeChange={this.changeActiveTheme}
+                />
+              </Grid.Box>
+              <Grid.Box fluid>
+                <Editor
+                  onChange={this.editorChanged}
+                  code={this.state.markdown}
+                />
+              </Grid.Box>
+            </Grid.Bounds>
+          </Grid.Bounds>
+        </Grid.Provider>
+      </ThemeProvider>
+    );
+  }
+}
