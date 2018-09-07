@@ -1,26 +1,17 @@
 import AceEditor from "react-ace";
 import base64 from "base-64";
 import React, { PureComponent } from "react";
-import styled from "styled-components";
+import styled, { withTheme } from "styled-components";
 import Grid from "hedron";
 
 // import our site's theme
 import Dropzone from "./Dropzone";
 import Preview from "../../components/Preview";
-import config from "../../config";
-import { processMarkdown, downloadMarkdown } from "../../utils";
+import { processMarkdown } from "../../utils";
 
 // import the required dependencies for our [br]ace editor.
 import "brace/mode/markdown";
 import "brace/keybinding/vim";
-
-// import the site's theme parameters
-const theme = require("../../styles/themes/cobalt").default;
-
-// unfortunately the import statement doesn't allow variables
-// to be used with it. So we need to use `require` to import
-// the dynamically-set ace editor theme.
-require(`brace/theme/${theme.editor_theme}`);
 
 /**
  * This is the container for the dual pane markdown editor
@@ -28,13 +19,15 @@ require(`brace/theme/${theme.editor_theme}`);
  * @class Editor
  * @extends {PureComponent}
  */
-export default class Editor extends PureComponent {
+class Editor extends PureComponent {
   constructor(props) {
     super(props);
   }
   componentWillMount() {
     // bind(this) allows `this` to be used from within the onDrop() function
     this.onDrop = this.onDrop.bind(this);
+
+    require(`brace/theme/${this.props.theme.editor_theme}`);
   }
 
   /**
@@ -66,14 +59,14 @@ export default class Editor extends PureComponent {
             {window && (
               <AceEditor
                 mode="markdown"
-                theme={theme.editor_theme}
+                theme={this.props.theme.editor_theme}
                 onChange={this.props.onChange}
                 value={this.props.code}
                 name="editor"
                 editorProps={{ $blockScrolling: true }}
                 keyboardHandler="vim"
                 width="100%"
-                height={`calc(100vh - ${theme.header_height})`}
+                height={`calc(100vh - ${this.props.theme.header_height})`}
                 fontSize={18}
                 setOptions={options}
                 wrapEnabled
@@ -91,3 +84,5 @@ export default class Editor extends PureComponent {
     );
   }
 }
+
+export default withTheme(Editor);

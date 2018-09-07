@@ -6,9 +6,12 @@ import { ThemeProvider } from "styled-components";
 import AppPage from "./containers/AppPage";
 // import our global styles
 import GlobalStyle from "./styles/global";
-// import our site's theme
-// import config from "./config";
-import theme from "./styles/themes/cobalt";
+
+// Load the active theme from the config
+// TODO: Allow users to change the theme
+// The theme in the config should be the default fallback
+const config = require("./config").default;
+const theme = require(`./styles/themes/${config.theme}`).default;
 
 /**
  * This is the top level render function
