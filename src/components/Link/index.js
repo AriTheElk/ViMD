@@ -1,5 +1,4 @@
-/* @flow */
-import styled from 'styled-components';
+import styled from "styled-components";
 
 // override the Link component
 const Link = styled.a`
