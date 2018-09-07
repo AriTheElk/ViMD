@@ -1,12 +1,12 @@
 import base from "./base";
 
 /**
- * Twilight Theme
+ * Dracula Theme
  */
-const twilight = {
+const dracula = {
   ...base,
   header_background: "#282a36",
   editor_theme: "dracula",
 };
 
-export default twilight;
+export default dracula;
