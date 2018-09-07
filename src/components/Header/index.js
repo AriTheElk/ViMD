@@ -4,7 +4,7 @@ import Grid from "hedron";
 import Brand from "./Brand";
 import Button from "./Button";
 import Navigation from "./Navigation";
-import Icon from "../Icon";
+import Link from "../Icon/Link";
 import Wrapper from "./Wrapper";
 
 /**
@@ -17,9 +17,11 @@ import Wrapper from "./Wrapper";
  */
 export default function Header(props) {
   const buttons = [
-    <Button key="github">GitHub</Button>,
+    <a href="https://github.com/garetmckinley/vimd" target="_blank">
+      <Button key="github">GitHub</Button>
+    </a>,
     <Button key="save" onClick={props.onSave}>
-      Save
+      Download
     </Button>,
   ];
   return (
