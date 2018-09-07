@@ -5,7 +5,7 @@ import base from "./base";
  */
 const twilight = {
   ...base,
-  header_background: "#1D1F21",
+  header_background: "#282a36",
   editor_theme: "dracula",
 };
 
