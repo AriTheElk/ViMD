@@ -20,7 +20,7 @@ const theme = require("../../styles/themes/cobalt").default;
 // unfortunately the import statement doesn't allow variables
 // to be used with it. So we need to use `require` to import
 // the dynamically-set ace editor theme.
-require(`brace/theme/${theme.editor.theme}`);
+require(`brace/theme/${theme.editor_theme}`);
 
 /**
  * This is the container for the dual pane markdown editor
@@ -66,14 +66,14 @@ export default class Editor extends PureComponent {
             {window && (
               <AceEditor
                 mode="markdown"
-                theme={theme.editor.theme}
+                theme={theme.editor_theme}
                 onChange={this.props.onChange}
                 value={this.props.code}
                 name="editor"
                 editorProps={{ $blockScrolling: true }}
                 keyboardHandler="vim"
                 width="100%"
-                height={`calc(100vh - ${theme.header.height})`}
+                height={`calc(100vh - ${theme.header_height})`}
                 fontSize={18}
                 setOptions={options}
                 wrapEnabled

@@ -6,10 +6,7 @@
  * a look at the `types.js` file.
  */
 const base = {
-  header: {
-    height: "44px",
-  },
-  editor: {},
+  header_height: "44px",
 };
 
 export default base;
