@@ -5,8 +5,8 @@ import base from "./base";
  */
 const twilight = {
   ...base,
-  header_background: "#1D1F21",
-  editor_theme: "dracula",
+  header_background: "#1D2021",
+  editor_theme: "gruvbox",
 };
 
 export default twilight;
