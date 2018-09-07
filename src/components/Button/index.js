@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-
+import styled from "styled-components";
 
 const Button = styled.button`
   background: transparent;
@@ -11,11 +10,10 @@ const Button = styled.button`
   font-size: 14px;
   font-style: italic;
   font-weight: 100;
-  overflow: hidden;
   padding: 8px 12px;
   &:disabled {
     cursor: not-allowed;
-    opacity: .7;
+    opacity: 0.7;
   }
 `;
 
