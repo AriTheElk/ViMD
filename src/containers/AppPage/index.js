@@ -45,9 +45,6 @@ export default class AppPage extends PureComponent {
     fetch(README)
       .then(response => response.text())
       .then(markdown => {
-        // Logs a string of Markdown content.
-        // Now you could use e.g. <rexxars/react-markdown> to render it.
-        console.log(markdown);
         this.setState({ markdown });
       });
   }

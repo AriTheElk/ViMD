@@ -10,7 +10,6 @@ import base64 from "base-64";
  * @param {string} content
  */
 export default function download(content) {
-  console.warn(content);
   // get a formatted string of the current datetime
   const filename = dateFormat(new Date(), "yyyy-mm-dd-hh.MM.ss");
   // download the editor contents in a markdown file.
