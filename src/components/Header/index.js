@@ -17,6 +17,9 @@ import Wrapper from "./Wrapper";
  */
 export default function Header(props) {
   const buttons = [
+    <a href="https://github.com/garetmckinley/vimd/issues" target="_blank">
+      <Button key="github">Report Issue</Button>
+    </a>,
     <a href="https://github.com/garetmckinley/vimd" target="_blank">
       <Button key="github">GitHub</Button>
     </a>,
