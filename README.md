@@ -7,6 +7,13 @@
 
 ### [Go to ViMD.io →](http://vimd.io)
 
+## Under the Hood
+
+- [create-react-app](https://github.com/facebook/create-react-app) - Foundation
+- [styled-components v4](https://github.com/styled-components/styled-components) - Component Styles
+- [hedron v1.0](https://github.com/garetmckinley/hedron) - Grid System
+- [express](https://github.com/expressjs/express) - Server Side Rendering
+
 ## Setup
 
 ```
