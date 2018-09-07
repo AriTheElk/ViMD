@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders header component 1`] = `
+<div
+  className="sc-gqjmRU bIMQkO sc-bwzfXH gWBCma"
+  direction="horizontal"
+  wrap={false}
+>
+  <div
+    className="sc-bxivhb ixCNyS"
+    fill={false}
+  >
+    <h1
+      className="sc-ifAKCX btOSSd"
+    >
+      Vi
+      <b>
+        MD
+      </b>
+    </h1>
+  </div>
+  <div
+    className="sc-bxivhb bRsLbt"
+    fill={false}
+  >
+    <ul
+      className="sc-dnqmqq gJhIRP sc-gzVnrw chEyJs"
+    >
+      <li
+        className="sc-htoDjs gYhcJG"
+      >
+        <button
+          className="sc-bZQynM hNnjUf"
+        >
+          GitHub
+        </button>
+      </li>
+      <li
+        className="sc-htoDjs gYhcJG"
+      >
+        <button
+          className="sc-bZQynM hNnjUf"
+          onClick={undefined}
+        >
+          Save
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
