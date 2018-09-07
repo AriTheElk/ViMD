@@ -1,13 +1,13 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
-import { fadeInLeft } from '../../styles/animations';
+import { fadeInLeft } from "../../styles/animations";
 
 /**
  * Define styles for the brand name
  */
 export default styled.h1`
-  animation: ${fadeInLeft} .8s normal forwards;
-  animation-delay: 1s;
+  animation: ${fadeInLeft} 0.5s normal forwards;
+  animation-delay: 0.5s;
   animation-timing-function: ease-out;
   color: #fff;
   font-size: 1.75em;
@@ -18,7 +18,7 @@ export default styled.h1`
   pointer-events: none;
   user-select: none;
   b {
-    color: rgba(255, 255, 255, .4);
+    color: rgba(255, 255, 255, 0.4);
     font-weight: 100;
   }
 `;

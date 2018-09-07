@@ -1,13 +1,14 @@
-import styled from 'styled-components';
-import { Box } from 'hedron';
-import { fadeIn } from '../../styles/animations';
+import styled from "styled-components";
+import Grid from "hedron";
+import { fadeIn } from "../../styles/animations";
 
-export default styled(Box)`
-  animation-delay: .25s;
+export default styled(Grid.Box)`
+  animation-delay: 0.25s;
   animation-timing-function: ease-out;
   animation: ${fadeIn} 2s normal forwards;
-  max-height: calc(100vh - ${(props) => props.theme.header.height});
+  max-height: calc(100vh - ${props => props.theme.header.height});
   opacity: 0;
-  overflow: scroll;
+  overflow: auto;
   word-wrap: break-word;
+  padding: 5px 25px;
 `;

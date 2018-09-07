@@ -1,19 +1,15 @@
-/* @flow */
-import type { Theme } from '../../types';
-
 /**
  * This is the base theme.
- * 
+ *
  * All other themes should extend this.
  * To see the available parameters, take
  * a look at the `types.js` file.
  */
-const base: Theme = {
+const base = {
   header: {
-    height: '44px',
+    height: "44px",
   },
-  editor: {
-  },
+  editor: {},
 };
 
 export default base;

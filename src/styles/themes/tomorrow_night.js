@@ -1,17 +1,15 @@
-/* @flow */
-import _ from 'lodash';
-import type { Theme } from '../../types';
-import base from './base';
+import _ from "lodash";
+import base from "./base";
 
 /**
  * Tomorrow Night Theme
  */
-const tomorrow_night: Theme = {
+const tomorrow_night = {
   header: {
-    background: '#1D1F21',
+    background: "#1D1F21",
   },
   editor: {
-    theme: 'tomorrow_night',
+    theme: "tomorrow_night",
   },
 };
 

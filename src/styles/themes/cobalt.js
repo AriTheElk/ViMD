@@ -1,17 +1,18 @@
-/* @flow */
-import _ from 'lodash';
-import type { Theme } from '../../types';
-import base from './base';
+import _ from "lodash";
+import base from "./base";
 
 /**
  * Cobalt Theme
  */
-const cobalt: Theme = {
+const cobalt = {
   header: {
-    background: '#00223E',
+    background: "#00223E",
   },
   editor: {
-    theme: 'cobalt',
+    theme: "cobalt",
+  },
+  preview: {
+    background: "HSL(207.1, 100%, 12.2%)",
   },
 };
 

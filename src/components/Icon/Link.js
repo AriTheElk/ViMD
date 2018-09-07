@@ -1,7 +1,6 @@
-/* @flow */
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import Link from '../Link';
+import Link from "../Link";
 
 // override the Link component
 export default styled(Link)`
