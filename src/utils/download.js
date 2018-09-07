@@ -1,6 +1,6 @@
-/* @flow */
 import dateFormat from "dateformat";
 import inBrowserDownload from "in-browser-download";
+import base64 from "base-64";
 
 /**
  * Downloads a markdown file in the browser with the current
@@ -10,8 +10,14 @@ import inBrowserDownload from "in-browser-download";
  * @param {string} content
  */
 export default function download(content) {
+  console.warn(content);
   // get a formatted string of the current datetime
   const filename = dateFormat(new Date(), "yyyy-mm-dd-hh.MM.ss");
   // download the editor contents in a markdown file.
-  inBrowserDownload(content, `${filename}.md`);
+  inBrowserDownload(
+    base64.encode(content),
+    `${filename}.md`,
+    "text/markdown",
+    "base64"
+  );
 }
