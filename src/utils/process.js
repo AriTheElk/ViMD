@@ -1,7 +1,7 @@
 import marked from "marked";
 
-export default function processMarkdown(source) {
-  const m = marked.setOptions({
+const processMarkdown = source =>
+  marked.setOptions({
     renderer: new marked.Renderer(),
     gfm: true,
     tables: true,
@@ -10,7 +10,6 @@ export default function processMarkdown(source) {
     sanitize: true,
     smartLists: true,
     smartypants: false,
-  });
-  console.warn(source);
-  return m(source);
-}
+  })(source);
+
+export default processMarkdown;
