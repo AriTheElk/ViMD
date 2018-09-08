@@ -22,6 +22,10 @@ import "brace/keybinding/vim";
 class Editor extends PureComponent {
   constructor(props) {
     super(props);
+
+    this.state = {
+      code: null,
+    };
   }
   componentWillMount() {
     // bind(this) allows `this` to be used from within the onDrop() function
@@ -42,6 +46,7 @@ class Editor extends PureComponent {
   onDrop(files) {
     const blob = files[0];
     const reader = new FileReader();
+
     reader.addEventListener("loadend", e => {
       this.setState({ code: e.target.result });
     });
@@ -63,7 +68,7 @@ class Editor extends PureComponent {
                 mode="markdown"
                 theme={this.props.theme.editor_theme}
                 onChange={this.props.onChange}
-                value={this.props.code}
+                value={this.state.code || this.props.code}
                 name="editor"
                 editorProps={{ $blockScrolling: true }}
                 keyboardHandler="vim"
