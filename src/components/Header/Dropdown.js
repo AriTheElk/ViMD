@@ -41,7 +41,7 @@ const Dropdown = styled(ReactDropdown)`
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
     box-sizing: border-box;
     margin-top: -3px;
-    max-height: 200px;
+    max-height: 500px;
     overflow-y: auto;
     position: absolute;
     top: 100%;
