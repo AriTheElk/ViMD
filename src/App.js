@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 import { ThemeProvider } from "styled-components";
 import Grid from "hedron";
 
-import Editor from "./containers/Editor";
+import Editor from "./containers/Editor/Async";
 import Header from "./components/Header";
 import { downloadMarkdown } from "./utils";
 
@@ -32,16 +32,12 @@ export default class App extends PureComponent {
       markdown: "",
       theme,
       // TODO: implement a less ugly method to handle this require
-      theme_data: require(`./styles/themes/${theme}`).default,
+      theme_data: require(`./styles/themes/${theme}`).default
     };
 
     // bind(this) allows `this` to be used from within our functions
     this.download = this.download.bind(this);
     this.editorChanged = this.editorChanged.bind(this);
-
-    // Initialize all the themes
-    // TODO: figure out how to avoid loading themes until they're changed
-    config.themes.forEach(theme => require(`brace/theme/${theme.value}`));
   }
 
   componentDidMount() {
@@ -61,7 +57,7 @@ export default class App extends PureComponent {
     this.setState(
       {
         theme: theme.value,
-        theme_data: require(`./styles/themes/${theme.value}`).default,
+        theme_data: require(`./styles/themes/${theme.value}`).default
       },
       () => localStorage.setItem("theme", theme.value)
     );
@@ -104,6 +100,7 @@ export default class App extends PureComponent {
               </Grid.Box>
               <Grid.Box fluid>
                 <Editor
+                  themes={config.themes}
                   onChange={this.editorChanged}
                   code={this.state.markdown}
                 />

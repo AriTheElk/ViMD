@@ -11,4 +11,5 @@ export default styled(Grid.Box)`
   overflow: auto;
   word-wrap: break-word;
   padding: 5px 25px;
+  background: white;
 `;

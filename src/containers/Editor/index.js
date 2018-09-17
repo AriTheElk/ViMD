@@ -24,13 +24,21 @@ class Editor extends PureComponent {
     super(props);
 
     this.state = {
-      code: null,
+      code: null
     };
   }
   componentWillMount() {
     // bind(this) allows `this` to be used from within the onDrop() function
     this.onDrop = this.onDrop.bind(this);
   }
+
+  componentDidMount = () => {
+    if (typeof this.props.themes === "object") {
+      // Initialize all the themes
+      // TODO: figure out how to avoid loading themes until they're changed
+      this.props.themes.forEach(theme => require(`brace/theme/${theme.value}`));
+    }
+  };
 
   setTheme = theme => {
     require(`brace/theme/${theme}`);
@@ -57,7 +65,7 @@ class Editor extends PureComponent {
     let options = {
       fontFamily: "Monaco, monospace",
       showLineNumbers: false,
-      showGutter: false,
+      showGutter: false
     };
     return (
       <Dropzone onDrop={this.onDrop} disableClick activeClassName="active">
@@ -65,6 +73,7 @@ class Editor extends PureComponent {
           <Grid.Box fluid width="50%">
             {window && (
               <AceEditor
+                className="editor"
                 mode="markdown"
                 theme={this.props.theme.editor_theme}
                 onChange={this.props.onChange}
@@ -83,7 +92,7 @@ class Editor extends PureComponent {
           <Preview
             width="50%"
             dangerouslySetInnerHTML={{
-              __html: processMarkdown(this.props.code),
+              __html: processMarkdown(this.props.code)
             }}
           />
         </Grid.Bounds>
