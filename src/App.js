@@ -23,13 +23,16 @@ const config = require("./config").default;
 export default class App extends PureComponent {
   // this gets run once, when the component initially mounts.
   componentWillMount() {
+    // Load the last used theme if stored, otherwise load the default theme
+    const theme = localStorage.getItem("theme") || config.default_theme;
+
     // set the initial state
     this.state = {
       // write some sample markdown to our state
       markdown: "",
-      theme: config.default_theme,
+      theme,
       // TODO: implement a less ugly method to handle this require
-      theme_data: require(`./styles/themes/${config.default_theme}`).default,
+      theme_data: require(`./styles/themes/${theme}`).default,
     };
 
     // bind(this) allows `this` to be used from within our functions
@@ -55,10 +58,13 @@ export default class App extends PureComponent {
 
   changeActiveTheme = theme => {
     console.log("changing theme to", theme);
-    this.setState({
-      theme: theme.value,
-      theme_data: require(`./styles/themes/${theme.value}`).default,
-    });
+    this.setState(
+      {
+        theme: theme.value,
+        theme_data: require(`./styles/themes/${theme.value}`).default,
+      },
+      () => localStorage.setItem("theme", theme.value)
+    );
   };
 
   /**
