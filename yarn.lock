@@ -1237,6 +1237,13 @@ babel-plugin-macros@2.4.2:
     cosmiconfig "^5.0.5"
     resolve "^1.8.1"
 
+"babel-plugin-styled-components@>= 1":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.8.0.tgz#9dd054c8e86825203449a852a5746f29f2dab857"
+  dependencies:
+    "@babel/helper-annotate-as-pure" "^7.0.0"
+    lodash "^4.17.10"
+
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
   resolved "http://registry.npmjs.org/babel-plugin-syntax-async-functions/-/babel-plugin-syntax-async-functions-6.13.0.tgz#cad9cad1191b5ad634bf30ae0872391e0647be95"
@@ -7332,11 +7339,12 @@ style-loader@0.19.0:
     loader-utils "^1.0.2"
     schema-utils "^0.3.0"
 
-styled-components@^4.0.0-beta.10:
-  version "4.0.0-beta.10"
-  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-4.0.0-beta.10.tgz#59c9243399a48ae040285e501a4f5acc6afb0071"
+styled-components@^4.0.0-beta.11.2:
+  version "4.0.0-beta.11.2"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-4.0.0-beta.11.2.tgz#3f03441b2e67b9fefaed191711e67870c50a1e92"
   dependencies:
     "@emotion/is-prop-valid" "^0.6.8"
+    babel-plugin-styled-components ">= 1"
     css-to-react-native "^2.2.2"
     memoize-one "^4.0.0"
     prop-types "^15.5.4"
