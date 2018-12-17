@@ -6400,9 +6400,9 @@ react-dom@^16.5.2:
     prop-types "^15.6.2"
     schedule "^0.5.0"
 
-react-dropdown@^1.6.2:
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/react-dropdown/-/react-dropdown-1.6.2.tgz#13ace229f1749f942cd0ec7eb221cb1a22788db7"
+react-dropdown@^1.6.3:
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/react-dropdown/-/react-dropdown-1.6.3.tgz#1421046856520960a78993e45c332ec362c73b57"
   dependencies:
     classnames "^2.2.3"
 
