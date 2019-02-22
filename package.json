@@ -14,7 +14,7 @@
     "ignore-styles": "^5.0.1",
     "in-browser-download": "^1.0.0",
     "marked": "^0.5.1",
-    "react": "^16.5.2",
+    "react": "^16.8.3",
     "react-ace": "^6.2.0",
     "react-dom": "^16.5.2",
     "react-dropdown": "^1.6.2",
