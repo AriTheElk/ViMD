@@ -18,7 +18,7 @@
     "react-ace": "^6.2.0",
     "react-dom": "^16.5.2",
     "react-dropdown": "^1.6.2",
-    "react-dropzone": "^6.0.4",
+    "react-dropzone": "^9.0.0",
     "react-scripts": "1.1.5",
     "styled-components": "^4.0.0-beta.11.3"
   },
