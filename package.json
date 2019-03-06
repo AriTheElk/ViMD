@@ -32,7 +32,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "react-test-renderer": "^16.5.2",
+    "react-test-renderer": "^16.8.4",
     "source-map-explorer": "^1.6.0"
   }
 }
