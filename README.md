@@ -56,7 +56,7 @@ $ yarn build
 
 ## Author
 
-ViMD is a project by [Garet McKinley](https://github.com/garetmckinley)
+ViMD is a project by [Aria](https://github.com/AriTheElk)
 
 ## License
 
